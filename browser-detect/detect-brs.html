@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta "charset=UTF-8" />
+<title>Browsers Detect</title>
+
+<script>
+// Detect the browsers
+
+if ( navigator.userAgent.indexOf("Opera")!=-1 || navigator.userAgent.indexOf("MSIE")!=-1) 
+	{ document.write("<img src='images/all-logo.jpg' class='all'>") };
+	
+if ( navigator.userAgent.indexOf("AppleWebKit")!=-1 ) 
+	{ document.write("<img src='images/GC-logo.png' class='gc'>") };
+	
+if ( navigator.userAgent.indexOf("Firefox")!=-1)
+	{ document.write("<img src='images/FF-logo.png' class='ff'>") };
+	
+</script>
+
+<style>
+
+.gc{ width: 400px; height: 400px; margin-left: 30%; margin-top: 10%; }
+.ff{ width: 310px; height: 325px; margin-left: 35%; margin-top: 10%; }
+.all{ width: 580px; height: 350px; margin-left: 27%; margin-top: 10%; }
+</style>
+</head>
+
+
+<body>
+
+</body>
+</html>
