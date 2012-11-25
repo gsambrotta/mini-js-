@@ -1,0 +1,60 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>images animation</title>
+</head>
+
+<script>
+
+// Preload images before use them
+<!-- Hide script from old browsers
+if (document.images)
+{
+	cow0 = new Image
+	cow1 = new Image
+	cow2 = new Image
+	cow3 = new Image
+	cow4 = new Image
+	cow5 = new Image
+		
+	cow0.src = "images/0.jpg"
+	cow1.src = "images/1.jpg"
+	cow2.src = "images/2.jpg"
+	cow3.src = "images/3.jpg"
+	cow4.src = "images/4.jpg"
+	cow5.src = "images/5.jpg"
+}
+// Stop hiding script from older browsers -->
+
+
+// MouseOver
+function MouseOver(){
+var urls;
+	//animation images
+	function animate(pos) {
+		pos %= urls.length;
+		document.images["cow"].src = urls[pos];
+		window.setTimeout("animate(" + (pos +1) + ");", 800);
+	}
+	
+	window.onload = function() {
+		urls = new Array( "images/0.jpg", "images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg", "images/5.jpg");
+		animate(0);
+	}
+}
+function MouseOut(){
+	document.cow.src = "images/1.jpg";
+}
+
+</script>
+
+<style>
+img { height: 400px; margin-left:30%; }
+</style>
+
+<body>
+
+<img name="cow" src="images/0.jpg" onMouseOver="MouseOver()" onMouseOut="MouseOut();" />
+</body>
+</html>
