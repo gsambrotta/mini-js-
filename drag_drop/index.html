@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>HTML5 Drag and Drop for Dj</title>
+		<meta name="description" content="" />
+		<meta name="author" content="giorgia sambrotta" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<style>
+		.wrap { width: 990px; margin: 0 auto; }
+		h2 { text-align: center; color: #0333; font-family: Arial;}
+		.library { background: url("library.jpg") no-repeat; width: 273px; height: 348px; float: left; margin-top: 10px; }
+		.cart { margin: 160px 70px 0 0; float: right; }
+		ul { padding: 0; margin: 0 0 0 17px;}
+		img { border: none; cursor: move; width: 55px; margin-top: 11px; padding: 0 11px; }
+		#bag { width: 245px; height: 257px; margin: 132px 0 0 187px; background: url("bag-open.png") no-repeat; float:left;
+				-moz-transform: scaleX(-1);	
+        		-o-transform: scaleX(-1);
+        		-webkit-transform: scaleX(-1);
+        		transform: scaleX(-1);
+        		filter: FlipH;
+        		-ms-filter: "FlipH";	
+        }
+        #bag.valid { background: url("bag-close.png") no-repeat; }
+        #bag.invalid { background: url("bag-open.png") no-repeat;}
+        
+        footer { width: 100%; display: inline-block; text-align: center; margin-top: 40px; }
+        a { color: #80d1ec; text-decoration: none; }
+        a:hover { opacity: 0.6; }
+		
+	</style>
+	<script>
+		// change #bag when drag on an element
+	var init = function() {
+		var bag = document.getElementById("bag");
+		
+		bag.ondragenter = function(event) {
+				this.className = "valid";
+		}
+		bag.ondragleave = function(event) {
+				this.className = "invalid";
+		}
+		
+		
+		// make #bag a target
+		bag.ondragover = function(event) {
+			return false;
+		}
+		
+		bag.ondrop = function(event) {
+			this.className = "invalid";
+			// Manage what happen when the user leave the mouse click
+
+			// get the vinyl name and write it in the vinyl's bag.
+			event.preventDefault();
+			var title = event.dataTransfer.getData("vinyl");
+			var tracklist = document.getElementById("tracklist");
+			var trackLi = document.createElement("li");
+			tracklist.appendChild(trackLi);
+			trackLi.innerHTML = title;
+			
+			
+			sum = document.getElementById("sum");
+            sum.innerHTML = parseFloat(sum.innerHTML) + parseFloat(event.dataTransfer.getData("text1"));
+			
+		}
+		
+		// temporary save the name of each elements thanks to title and ondragstart
+		var vinyls = document.getElementsByTagName("IMG");
+		var icon = document.createElement('img');
+        icon.src = "proxy.png";
+		for (var i = 0; i < vinyls.length; i++) {
+			vinyls[i].ondragstart = function(event){
+				event.dataTransfer.setData("vinyl", this.title);
+				event.dataTransfer.setData("text1", event.target.dataset.value);
+				event.dataTransfer.setDragImage(icon, -5, -5);
+			}
+		}
+	}		
+	onload = init;	
+	</script>
+	</head>
+	
+	<body>
+		<div class="wrap">
+			<h2>Drop the tracks from yours favourite dj in your Dj's bag!</h2>
+			<div class="library">
+				<ul>
+					<img src="disc1.png" title="Adam Beyer" data-value="1"/>
+					<img src="disc2.png" title="Len Faky" data-value="1"/>
+					<img src="disc3.png" title="Far Too Loud" data-value="1"/>
+				</ul>
+				<ul>
+					<img src="disc4.png" title="Federico Molinari" data-value="1"/>
+					<img src="disc5.png" title="Eletrixx" data-value="1"/>
+					<img src="disc6.png" title="Narcotek" data-value="1"/>
+				</ul>
+				<ul>
+					<img src="disc5.png" title="Gotek" data-value="1"/>
+					<img src="disc1.png" title="Groove Daniel" data-value="1"/>
+					<img src="disc3.png" title="Air" data-value="1"/>
+				</ul>
+				<ul>
+					<img src="disc6.png" title="Moby" data-value="1"/>
+					<img src="disc2.png" title="Tiesto" data-value="1"/>
+					<img src="disc4.png" title="Jade" data-value="1"/>
+				</ul>
+				<ul>
+					<img src="disc3.png" title="Dose" data-value="1"/>
+					<img src="disc6.png" title="Apparat" data-value="1"/>
+					<img src="disc2.png" title="Kenishii" data-value="1"/>
+				</ul>
+			</div>
+     
+				<div id="bag"> </div>
+				<div class="cart">
+					<p>Your bag has: <output id="sum"> 0 </output> tracks.</p>
+					<ul id="tracklist">
+					</ul>
+				</div>
+				
+
+			<footer>
+				<p>
+					 Experiment by <a href="www.designbygio.it">designbygio.it</a>
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
