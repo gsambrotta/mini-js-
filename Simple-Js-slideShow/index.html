@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+	<title>Simple Js Gallery - Demo</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="author" content="giorgia sambrotta" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+</head>
+<style>
+	.picture-frame {
+	  height: 612px; /* height of one image */
+	  width: 612px;  /* width of one image */
+	  overflow: hidden;
+	  margin: 50px auto;
+	  position: relative;
+	}
+
+	.filmroll {
+	  width: 1836px; /* 3 times width of one image */
+	  left: 0px;
+	  top: 0px;
+	  position: absolute;
+	}
+
+	img {
+	  float: left;
+	}
+</style>
+
+
+<div class="picture-frame">
+	<div id="the-film-roll" class="filmroll">
+	</div>
+</div>
+
+<script src="slideshow.js"></script>
