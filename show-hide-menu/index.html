@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Hide and Show Menu</title>
+		<meta name="author" content="Giorgia sambrotta" />
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.one').click(function(){
+					$('.divSlide').animate(
+						{'height':'toggle'}, { duration: 50 }
+					);
+				});	
+				$('.two').click(function(){
+					$('.divSlide2').animate(
+						{'height':'toggle'}, { duration: 50 }
+					);
+				});
+				$('.three').click(function(){
+					$('.divSlide3').animate(
+						{'height':'toggle'}, { duration: 50 }
+					);
+				});	
+				$('.four').click(function(){
+					$('.divSlide4').animate(
+						{'height':'toggle'}, { duration: 50 }
+					);
+				});	
+				$('.five').click(function(){
+					$('.divSlide5').animate(
+						{'height':'toggle'}, { duration: 50 }
+					);
+				});		
+			});
+		</script>
+		<style>
+			*{
+				font-family: sans-serif;
+				font-size: 1em;
+				color: #444;
+				letter-spacing:0px;
+				font-weight: lighter;
+			}
+			.main { 
+				width: 50%;
+				margin: 0 auto;
+			}
+			header, footer, .wrap {
+				text-align: center;
+			}
+			header { margin-top: 20px; font-weight: bold; font-size: 2em;}
+			footer { margin-top: 50px; }
+			.wrap {
+				background: #ffe160; /* Old browsers */
+				background: -moz-linear-gradient(top, #ffe160 0%, #f4b904 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffe160), color-stop(100%,#f4b904)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #ffe160 0%,#f4b904 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top, #ffe160 0%,#f4b904 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top, #ffe160 0%,#f4b904 100%); /* IE10+ */
+				background: linear-gradient(to bottom, #ffe160 0%,#f4b904 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe160', endColorstr='#f4b904',GradientType=0 ); /* IE6-9 */
+				border: 1px solid #e08c06;
+				width: 100%;
+				height: 35px;
+				padding: 0 10px;
+			}
+			.wrap:hover{ 
+				background: #f4b904; /* Old browsers */
+				background: -moz-linear-gradient(top, #f4b904 1%, #f4b904 52%, #e08c06 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f4b904), color-stop(52%,#f4b904), color-stop(100%,#e08c06)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #f4b904 1%,#f4b904 52%,#e08c06 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top, #f4b904 1%,#f4b904 52%,#e08c06 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top, #f4b904 1%,#f4b904 52%,#e08c06 100%); /* IE10+ */
+				background: linear-gradient(to bottom, #f4b904 1%,#f4b904 52%,#e08c06 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4b904', endColorstr='#e08c06',GradientType=0 ); /* IE6-9 */
+			}
+			a { 
+				display: block; 
+				text-align: center;
+				padding: 10px 0;
+				color: #444;
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: -1px;
+				font-style: italic;
+				font-weight: 400;
+			}
+			.divSlide, .divSlide2, .divSlide3, .divSlide4, .divSlide5 {
+				display: none;
+				padding: 10px;
+				width: 100%;
+				text-align: justify;
+				background: #ffe160;
+				border: 1px solid #e08c06;
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<header>
+				<h1> Hide and Show </h1>
+			</header>
+			
+			<div class="wrap"><a href="#" class="one">Birds</a></div>
+			<div class="divSlide">Your friends, birds! <br> Birds are feathered, winged, bipedal, endothermic, egg-laying, vertebrate animals. With around 10,000 living species, they are the most speciose class of tetrapod vertebrates.</div>
+
+			<div class="wrap"><a href="#" class="two">Horses</a></div>
+			<div class="divSlide2">The wild horse.<br> The wild horse (Equus ferus) is a species of the genus Equus, which includes as subspecies the domesticated horse as well as the undomesticated Tarpan and Przewalski's horse The Tarpan became extinct in the 19th century, and Przewalski's Horse was saved from the brink of extinction and reintroduced successfully to the wild. The possible ancestor of the domestic horse was the Tarpan, which roamed the steppes of Eurasia at the time of domestication.However, other subspecies of Equus ferus may have existed and could have been the stock from which domesticated horses are descended.Since the extinction of the Tarpan, attempts have been made to reconstruct the phenotype of the Tarpan, resulting in horse breeds such as the Konik and Heck horse. However, the genetic makeup and foundation bloodstock of those breeds is substantially derived from domesticated horses, and therefore these breeds possess domesticated traits
+				</div>
+			
+			<div class="wrap"><a href="#" class="three">Fishes</a></div>
+			<div class="divSlide3">Clownfish.<br> The clownfish is a type of fish that lives in salt water habitats. It is also called an Anemonefish. Clownfish are typically very bright, orange fish that have three white stripes, one at the head, middle and tail. If you look really closely, you may notice that there are thin black lines around the white stripes. Also, the tips of their fins have a thin black rounded stripe. 
+				</div>
+			
+			<div class="wrap"><a href="#" class="four">Wild Cats</a></div>
+			<div class="divSlide4">Snow Leopard.<br> These rare, beautiful gray leopards live in the mountains of Central Asia. They are insulated by thick hair, and their wide, fur-covered feet act as natural snowshoes. Snow leopards have powerful legs and are tremendous leapers, able to jump as far as 50 feet (15 meters). They use their long tails for balance and as blankets to cover sensitive body parts against the severe mountain chill.
+				</div>
+			
+			<div class="wrap"><a href="#" class="five">Dinosaur</a></div>
+			<div class="divSlide5">Dinos.<br> inosaurs is an American family sitcom that was originally broadcast on ABC from April 26, 1991 to July 20, 1994. The show, about a family of anthropomorphic dinosaurs (portrayed by puppets), was produced by Michael Jacobs Productions and Jim Henson Productions in association with Walt Disney Television and distributed by Buena Vista International, Inc.
+				</div>
+			<footer>
+				<p>
+					 Experiment by <a href="www.designbygio.it">@designbygio</a>
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
