@@ -6,7 +6,6 @@ function scroll(start, end){
 	var current = start; 
 
 	function move(){
-		console.log(current - 15, end) 
 		filmroll.style.left = current + 'px';
 
 		if (start > end){ 
@@ -24,7 +23,6 @@ function scroll(start, end){
 	scrolling = true;
 }
 
-
 // Creo funzione per far muovere la slide con freccie
 
 function handleEvent(e) {
@@ -36,14 +34,22 @@ backAndForth(e.keyCode);
 var current = 0;
 
 function backAndForth(keyCode) { 
-	// Left
-	if (keyCode == 37){
+	// Right
+	if (keyCode == 39){
+		if(current === (photos.length - 1) * (-616)){
+			scroll(current, 0);
+			current = 0;
+			return;
+		}
 		scroll(current, current - 616);
 		current -= 616;  //This is a shortcut for write: current = current - 616;
 		//scroll(current, current + 616) == false;
 		}
-	// Right
-	if (keyCode == 39){
+	// Left
+	if (keyCode == 37){
+		if(current === 0){
+			return;
+		}
 		scroll(current, current + 616);
 		current += 616;
 		//scroll(current, current - 616) == false;
