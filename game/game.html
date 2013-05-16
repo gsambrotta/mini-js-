@@ -1,0 +1,229 @@
+<html>
+  <head>
+    <title>Rebound</title>
+  </head>
+  <style>
+   #playingArea{
+      position: absolute;
+      top: 100;
+      left: 100;
+      border: 1px solid black;
+      width: 500;
+      height: 500;
+      background-color: rgb(192,192,192);
+   }
+   #paddle{
+      position: absolute;
+      top: 470;
+      left: 228;
+      width: 64;
+      height: 16;
+}
+   #ball{
+      position: absolute;
+      top: 4;
+      left: 200;
+      width: 16;
+      height: 16;
+   }
+   #score{
+      position: absolute;
+      top: 486;
+      left: 0;
+      width: 500;
+      height: 14;
+      font-size: 10pt;
+      color: white;
+      background-color: rgb(32,128,64);
+   }
+   
+   button {
+    position: absolute;
+    top: 567px;
+    left: 700px;
+   }
+   
+   button#clear {
+    left: 800px;
+   }
+</style>
+  <script>
+    (function () {
+      //set instance var
+      var ball;
+      var paddle;
+      var score;
+      
+      //set init speed
+      var dx = 6;
+      var dy = 6;
+      var currentScore = 0;
+      var timer;
+      
+      // set init condition for ball and speed
+      var paddleLeft = 228;
+      var ballLeft = 200;
+      var ballTop = 4;
+      
+      function init(){
+        ball = document.getElementById("ball");
+        paddle = document.getElementById("paddle");
+        score = document.getElementById("score");
+
+        clear = document.getElementById("clear");
+        startAgain = document.getElementById("start");
+      };
+      
+      function keyListener(e){
+        console.log(e, e.keyCode);
+        if(!e){
+        //for IE
+        e = window.event;
+        };
+        //Left arrow
+        if (e.keyCode == 37 && paddleLeft > 0){
+          paddleLeft -= 21;
+          paddle.style.left = paddleLeft;
+        };
+        //Right arrow
+        if(e.keyCode == 39 && paddleLeft < 436){
+          paddleLeft += 21;
+          paddle.style.left = paddleLeft;
+        };
+        // note: keycode 38 is arrow up & 40 is arrow down
+      };
+      
+      
+      function start(){
+        detectCollisions();
+        moveBall();
+        updateScore();
+        render();
+        difficulty();
+        
+        if(ballTop < 500){
+          timer = setTimeout(start, 20);
+        } else {
+           gameOver();
+        }
+      };
+      
+      //start loop game
+      function collisionX(){
+        if(ballLeft < 4 || ballLeft > 480){
+          return true;
+        } else {
+          return false;
+        }
+      };
+      
+      function collisionY(){
+        if(ballTop < 4)
+        return true;
+        if(ballTop > 450){
+          if(ballLeft > paddleLeft && ballLeft < paddleLeft + 64)
+          return true;
+        }
+        return false; 
+      };
+      
+      function detectCollisions(){
+        if (collisionX())
+          dx = dx * -1;
+        if (collisionY())
+          dy = dy * -1;
+      };
+      
+      function render(){
+        renderBall();
+        renderScore();
+      };
+      
+      function moveBall(){
+        ballLeft += dx;
+        ballTop += dy;
+      };
+      
+      function renderBall() {
+        ball.style.left = ballLeft + "px";
+        ball.style.top = ballTop + "px";
+      }
+      
+      function updateScore(){
+        currentScore += 5;
+      };
+      
+      function renderScore() {
+        score.innerHTML = "Score:" + currentScore;
+      }
+      
+      function difficulty(){
+        if (currentScore % 1000 == 0)
+          if(dy > 0){
+          dy += 1;
+          } else {
+          dy -= 1;
+          }       
+      };
+      
+      function gameOver(){
+        clearTimeout(timer);
+        score.innerHTML += " Game Over";
+        score.style.backgroundColor = 'rgb(128,0,0)';
+        ball.style.display = "none"; 
+      };
+      
+      function resetScore() {
+        currentScore = 0;  
+      }
+      
+      function resetPositions() {
+        paddleLeft = 228;
+        ballLeft = 200;
+        ballTop = 4;
+       
+      }
+      
+      window.onload = function () {
+        init();
+        // start game loop
+        start();
+        
+        clear.onclick = function(){
+          resetPositions();
+          resetScore();
+          render();
+          ball.style.display = "inherit";
+          score.style.backgroundColor = 'rgb(32,128,64)';
+        };
+        startAgain.onclick = function(){
+          start();
+        };
+        
+      };
+      
+      //Register keyListener with document object
+      document.onkeydown = keyListener;
+    }());
+      
+  </script>
+
+  <body>
+  <h1>Rebound</h1>
+  <div id="playingArea">
+    <div id="paddle">
+        <img src="paddle.jpg">
+    </div>
+    <div id="ball">
+        <img src="ball.png">
+    </div>
+    <div id="score">
+        Score: 0
+    </div>
+    
+  </div>
+  
+  <button id="clear">Clear</button>
+  <button id="start">Start Again</button>
+  </body>
+</html>
