@@ -1,0 +1,60 @@
+.hidden{
+	display: none;
+}
+
+.error {
+	color: red;
+	
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.container-fluid{
+    padding-top: 20px;
+}
+
+.row-fluid [class*="span"]{
+    width: auto!important;
+}
+
+label {
+    margin-bottom: 25px!important;
+}
+
+input {
+    display: block!important;
+}
+
+.inline {
+    display: inline!important;
+}
+
+input[type="submit"]{
+    margin-top: 26px;
+}
+
+.check{
+    position: relative;
+    top: -3px;
+}
+
+/* error positioning */
+#pswMinMax, #pswLettNum {
+    position: absolute;
+    top: 67px;
+}
+#pswR {
+    position: absolute;
+    top: 107px
+}
+
+#checkN{
+    position: relative;
+    top: 138px
+}
