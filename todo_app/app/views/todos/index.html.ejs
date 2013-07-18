@@ -1,0 +1,19 @@
+<div class="hero-unit">
+  <h2>All Todos</h2>
+  <%- linkTo('Create a new Todo', addTodoPath, {class: 'btn pull-right'}); %>
+</div>
+
+<div id="todos-list">
+<% if (todos) { %>
+<% for (var i = 0, ii = todos.length; i < ii; i++) { %>
+  <div class="row list-item" id="todo-<%= todos[i].id; %>">
+    <div class="span8">
+      <h3><%- linkTo(todos[i].title, todoPath(todos[i].id)); %></h3>
+    </div>
+    <div class="span4">
+      <h3><i class="icon-list-alt"></i><%= todos[i].id; %></h3>
+    </div>
+  </div>
+<% } %>
+<% } %>
+</div>

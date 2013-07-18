@@ -2,8 +2,13 @@
 	display: none;
 }
 
+input.hidden{
+    display: none!important;
+}
+
+
 .error {
-	color: red;
+	color: #DF013A;
 	
 }
 
@@ -17,6 +22,19 @@
 
 .container-fluid{
     padding-top: 20px;
+    width: 590px;
+    margin: 0 auto;
+    background: #E0F2F7;
+    border-radius: 0 0 10px 10px;
+}
+
+form {
+    width: 590px;
+    display: inline-block;
+}
+
+#login-form {
+    margin: 40px 0 20px;
 }
 
 .row-fluid [class*="span"]{
@@ -44,17 +62,47 @@ input[type="submit"]{
     top: -3px;
 }
 
-/* error positioning */
-#pswMinMax, #pswLettNum {
-    position: absolute;
-    top: 67px;
-}
-#pswR {
-    position: absolute;
-    top: 107px
+.policy {
+    float: left;
+    font-size: 0.9em;
 }
 
-#checkN{
-    position: relative;
-    top: 138px
+#submit-button, #showPswButton {
+    border-radius: 6px;
+    text-transform: capitalize; 
+    font-size: 1.2em;
+}
+
+#showPswButton { 
+    float: right;
+    font-size: 0.7em;
+    padding: 0px 3px;
+    height: 17px;
+    line-height: 1px;
+}
+
+/* error positioning */
+#emailEmpty, #pswEmpty, #pswrepEmpty, #checkEmpty, #invalidEmail, #invalidPsw, #invalidPswRep {
+    position: absolute;
+}
+#emailEmpty, #invalidEmail{
+    margin-top: 3px;
+}
+
+#pswEmpty{
+    margin-top: 43px;
+}
+
+ #invalidPsw{
+    margin-top: 37px;
+    max-width: 237px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#pswrepEmpty, #invalidPswRep{
+    margin-top: 87px;
+}
+#checkEmpty{
+    margin-top: 120px;
 }
