@@ -1,21 +1,12 @@
+
 <?php
-       // from the form
-       $email = trim(strip_tags($_POST['emailinput']));
-       $password = trim(strip_tags($_POST['pswinput']));
+$email = trim(strip_tags($_POST['email']));
+$password = trim(strip_tags($_POST['pwd']));
 
-       // set here
-       $subject = "Registration successful";
-       $to = 'g.sambrotta@gmail.com';
+$body = $email.$password;
 
-       $body = <<<HTML
-$email
-$password
-HTML;
+       //header('Content-type: application/json');
 
-       $headers .= "Content-type: text/html\r\n";
-       header('Content-type: application/json');
-
-       // send the email
-       mail($to, $subject, $body, $headers);
-
+// send the email
+mail($email, $password, $body);
 ?>

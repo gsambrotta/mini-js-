@@ -87,8 +87,8 @@ gioApp.submitForm = function() {
 	$.ajax({
 		url: 'http://localhost:8888/validation-form/sendemail.php',
 		method: 'post',
-		//data: formData,
-		dataType: 'html',
+		data: formData,
+		//dataType: 'json',
 		success: gioApp.submitSuccess,
 		error: gioApp.submitError
 	});
@@ -112,7 +112,7 @@ gioApp.submitError = function(jqXHR, textStatus, errorThrown){
 
 
 gioApp.isValidEmail = function(email) {
-	var validCharacters = /^\w+@\w+\.\w+$/;
+	var validCharacters = /^[\w\.]+@\w+\.\w+$/;
 	return validCharacters.test(email);
 };
 
