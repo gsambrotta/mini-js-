@@ -1,0 +1,200 @@
+
+* { margin: 0; padding: 0;}
+
+body{
+	background: #272228;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	letter-spacing: 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+section {
+	width: 318px;
+	margin: 0 auto;
+	padding: 30px 30px 20px;
+	margin-top: 70px;
+	background: #fff;
+}
+
+
+h1 {
+	text-align: center;
+	color: #212121;
+	/*font-style: italic;*/
+	font-size: 2.3em;
+	text-shadow: 1px 1px 0px #f4f4f4;
+	margin-bottom: 17px;
+	letter-spacing: -3px;
+}
+
+input {
+	width: 299px;
+	height: 32px;
+	background-color: #f1f1f1;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-bottom: 0px;
+	border-right: 0px;
+	color: #888;
+	text-transform: capitalize;
+	font-size: 0.9em;
+	padding: 3px 7px;	
+	margin-bottom: 10px;
+}
+
+input:focus
+{
+  outline: none;
+}
+
+#addButton, .deleteButton {
+	border: 0px;
+	position: relative;
+	background-color: #f1f1f1;
+	float: right;
+}
+
+#addButton {
+	top: -48px;
+	left: -5px;
+	width: 46px;
+	height: 38px;
+	background-color: #ddd;
+	border-left: #ddd 1px solid;
+	border-top: #ccc 1px solid;
+}
+
+.deleteButton {
+	left: -7px;
+	top: 9px;
+	height: 30px;
+	width: 33px;
+}
+
+#addButton:hover, .deleteButton:hover {
+	background-color: #cfcfcf;
+	border-left: #ddd 1px solid;
+	border-top: #ddd 1px solid;
+}
+
+.deleteButton:hover {
+	background-color: #ddd;
+}
+
+ul {
+	list-style: none;
+	margin-top: -35px;
+}
+
+li {
+	margin-bottom: 8px;
+	height: 47px;
+	width: 315px;
+	background-color: #f9f9f9;
+}
+
+li p {
+	line-height: 42px;
+	float: left;
+	margin-left: 14px;
+}
+
+input[type="checkbox"]{
+	width: 30px;
+	float: left;
+}
+
+.line{
+	text-decoration: line-through;
+}
+
+span.jqTransformCheckboxWrapper{
+	display:block;float:left;
+	margin-top: 12px;
+	margin-left: 10px
+}
+a.jqTransformCheckbox {
+	background: transparent url(img/checkbox.gif) no-repeat center top;
+	vertical-align: middle;
+	height: 19px;
+	width: 18px;
+	display:block;/*display: -moz-inline-block;*/
+}
+/* Checked - Used for both Radio and Checkbox */
+a.jqTransformChecked { background-position: center bottom;}
+
+
+/* Selects  */
+.jqTransformSelectWrapper {
+	width: 45px;
+	position:relative;
+	height: 31px;
+	background: url(img/select_left.gif) no-repeat top left;
+	float:left;
+}
+
+.jqTransformSelectWrapper div span {
+	
+	font-size: 12px;
+	float: none;
+	position: absolute;
+	white-space: nowrap;
+	height: 31px;
+	line-height: 15px;
+	padding: 8px 0 0 7px;
+	overflow: hidden;
+	cursor:pointer;
+	/*border: 1px solid #CCCCCC;*/
+/*	border-right: none;*/
+}
+
+.jqTransformSelectWrapper  a.jqTransformSelectOpen {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 31px;
+	height: 31px;
+	background: url(img/select_right.gif) no-repeat center center;
+}
+
+.jqTransformSelectWrapper ul {
+	position: absolute;
+	width: 43px;
+	top: 30px;
+	left: 0px;
+	list-style: none;
+	background-color: #FFF;
+	border: solid 1px #CCC;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 150px;
+	overflow: auto;
+	overflow-y: auto;
+	z-index:10;
+}
+
+.jqTransformSelectWrapper ul a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color:#333;
+	background-color: #FFF;
+	font-size: 12px;
+}
+
+.jqTransformSelectWrapper ul a.selected {
+	background: #EDEDED;
+	color: #333;
+}
+
+.jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {
+	background:#3582c4;
+	color: #fff;
+}
+
+/* Hidden - used to hide the original form elements */
+.jqTransformHidden {display: none;}
