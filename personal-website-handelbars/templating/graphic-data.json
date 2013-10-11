@@ -1,0 +1,87 @@
+[
+	{
+		"path": "images/graphic/tb/tb_graphic_absolute.png",
+		"alt": "Absolute Vodka",
+		"title": "ABSOLUTE WORLD",
+		"description": "Multilayer",
+		"descriptionSingle": "Absolute Vodka competition. <br />Illustration made with Adobe Illustrator and Adobe Photoshop.",
+		"pathSingle": "images/graphic/absolute.png",
+		"altSingle": "Absolute Vodka Focus"
+	},
+
+	{
+		"path": "images/graphic/tb/tb_graphic_omino.jpg",
+		"alt": "omino graphic",
+		"title": "HEADMAN",
+		"description": "Sketch",
+		"descriptionSingle": "Sketch. <br />Illustration made with Adobe Illustrator and Adobe Photoshop.",
+		"pathSingle": "images/graphic/omino.png",
+		"altSingle": "HEADMAN Focus"
+	},
+
+	{
+		"path": "images/graphic/tb/tb_graphic_tubi.jpg",
+		"alt": "Tubes",
+		"title": "TUBES",
+		"description": "Graphic Sketch",
+		"descriptionSingle": "Sketch. <br />Illustration made with Adobe Illustrator and Adobe Photoshop.",
+		"pathSingle": "images/graphic/tubi.png",
+		"altSingle": "Tubes Focus",
+		"pathSingle2": "images/graphic/tubi-shirt.png",
+		"altSingle2": "Tubes T-Shirt Focus"
+	},
+
+	{
+		"path": "images/graphic/tb/tb_graphic_coppia.jpg",
+		"alt": "Eyes",
+		"title": "EYES",
+		"description": "Graphic Sketch",
+		"descriptionSingle": "Sketch. <br />Illustration made with Adobe Illustrator and Adobe Photoshop.",
+		"pathSingle": "images/graphic/coppia.png",
+		"altSingle": "Eyes Focus"
+	},
+
+	{
+		"path": "images/graphic/tb/tb_graphic_leader.jpg",
+		"alt": "Igor",
+		"title": "IGOR",
+		"description": "Graphic Sketch",
+		"descriptionSingle": "Sketch. <br />Illustration made with Adobe Illustrator and Adobe Photoshop.",
+		"pathSingle": "images/graphic/leader.png",
+		"altSingle": "Igor Focus",
+		"pathSingle2": "images/graphic/leader-shirt.png",
+		"altSingle2": "Igor T-Shirt Focus"
+	},
+
+	{
+		"path": "images/graphic/tb/tb_graphic_batman.jpg",
+		"alt": "Batman",
+		"title": "BATMAN",
+		"description": "Graphic Sketch",
+		"descriptionSingle": "Sketch. <br />Illustration made with Adobe Illustrator and Adobe Photoshop.",
+		"pathSingle": "images/graphic/batman.png",
+		"altSingle": "Batman Focus"
+	},
+
+	{
+		"path": "images/graphic/tb/tb_graphic_vortex.jpg",
+		"alt": "Vortex",
+		"title": "VORTEX",
+		"description": "Graphic Sketch",
+		"descriptionSingle": "Sketch. <br />Illustration made with Adobe Illustrator and Adobe Photoshop.",
+		"pathSingle": "images/graphic/vortex.png",
+		"altSingle": "Vortex Focus",
+		"pathSingle2": "images/graphic/vortex-shirt.png",
+		"altSingle2": "Vortex T-Shirt Focus"
+	},
+
+	{
+		"path": "images/graphic/tb/tb_graphic_alfredo.jpg",
+		"alt": "Alfredo",
+		"title": "ALFREDO",
+		"description": "Graphic Sketch",
+		"descriptionSingle": "Sketch. <br />Illustration made with Adobe Illustrator and Adobe Photoshop.",
+		"pathSingle": "images/graphic/alfredo.png",
+		"altSingle": "Alfredo Focus"
+	}
+]

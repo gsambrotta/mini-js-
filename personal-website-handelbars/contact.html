@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Sambrotta Giorgia - Web designer - Contact</title>
+    <meta name="description" content="Portfolio of web designer that living and working in Berlin and also in Milan. Website showcase and illustration/graphic draw. Giorgia Sambrotta show her a mix of her own work and her working experience in the word wide web." />
+    <meta name="keywords" content="Web, Designer, html, css, javascript, monster, illustrator, portfolio, showcase, website"/>
+    
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    <script src="js/modernizr.custom.73372.js" type="text/javascript"></script>
+    <script src="js/selectivizr-min.js" type="text/javascript"></script>
+
+    <script src="lib/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/animateContact.js"></script>
+	<script type="text/javascript" src="js/validationForm.js"></script>
+	<style>
+    	body { background:url(images/righe.png) repeat scroll #fff; }
+    </style>
+
+    <!-- *** GA snippet  *** -->       
+    <script type="text/javascript">
+	  var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21288638-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script> 
+</head>
+<body>
+	<header>
+		<div class="logo-wrap">
+			<a href="index.html"><img class="logo" src="images/logo.png" width="165" alt="Logo" title="designbygio.it" /></a>
+		</div>
+		<div class="social">
+			<nav>        
+			  <ul class="contact-social">
+				  <li><a href="https://twitter.com/#!/designbygio" target="_blank"><img src="images/transparent.gif" class="sprite twt" alt="tweeter"/></a></li>
+				  <li><a href="https://plus.google.com/u/0/112468997622326549149/posts" target="_blank"><img src="images/transparent.gif" class="sprite g" alt="google+"/></a></li>
+				  <li><a href="http://de.linkedin.com/pub/giorgia-sambrotta/27/235/616" target="_blank"><img src="images/transparent.gif" class="sprite in" alt="linkedin"/></a></li>
+				  <li><a href="https://www.xing.com/profile/Giorgia_Sambrotta?sc_o=mxb_p" target="_blank"><img src="images/transparent.gif" class="sprite x" alt="xing"/></a></li>
+				  <li><a href="https://github.com/gsambrotta" target="_blank"><img src="images/transparent.gif" class="sprite gh" alt="github"/></a></li>
+			  </ul>
+			</nav>
+		</div>
+		<div class="line"></div>
+	</header>
+
+	<div class="front hello isClose">
+		<div class="iconContact"></div>
+		<h3>Who is designbygio?</h3>
+		<a href="#" class="more">
+			<span>more...</span>
+		</a>
+	</div>
+	<div class="contentContact hello">
+		<h6>Hello There!</h6>
+		<a href="#" class="close"></a>
+		<div class="content-text aboutme">
+			<p>I'am Giorgia Sambrotta<br />
+			I'm a web designer, I love creating and developing innovative web sites or applications with personal style and why not, with fun. I usually work with Html5, css3 or Sass and Javascript. I use to spend my spare time plaing with Js framework and try to do amazing stuff with all these technologies. <br />However I don't do just this, i'm keep on drawing so i also make layout and template for website.<br />
+			I'm Italian based in Berlin where i enjoy the tech scenes and events.<br />
+			I'm an active memeber of <a href="www.opentechschool.org">OpenTechSchool</a> where, throught helping others going more in to tech world, i also have the chance to meet interesting professionist and always improve my self.
+			This is a short introduction of me, but of'course that's not all! <br />So if you looking for young, fresh and open mind, you can browse through my work and discover me or just contact me.</p>
+			<p>My Strongest Skills: Html(5)|Css(3)|Sass|Javascript|jQuery|Github|Photoshop|Illustrator|UI.</p>
+		</div>
+	</div>
+
+	<div class="front form isClose">
+		<div class="iconContact"></div>
+		<h3>Keep in <br />Touch</h3>
+		<a href="#" class="more">
+			<span>more...</span>
+		</a>
+	</div>
+	<div class="contentContact form isClose">
+		<a href="#" class="close">close</a>
+		<p> Write me what you have in your mind <br />or just leave me a message</p>
+		<div class="content-text">
+			<form id="mailform" novalidate>
+				<label>Name</label>
+				<input type="text" name="name" id="name" value="" /><br >
+				<label>Email </label>
+				<input type="email" name="email" id="email" value="" /><br >
+				<label class="text">Text</label>
+				<textarea cols="64" rows="3" name="text" id="textarea" value=""></textarea><br >
+				<input type="submit" name="submit" class="submit" value="Send">
+
+				<div class="errors-block">
+					<p id="nameEmpty" class="hidden error">Name is required</p>
+					<p id="emailEmpty" class="hidden error">I need your email</p>
+					<p id="textEmpty" class="hidden error">Leave me a message</p>
+
+					<p id="emailInvalid" class="hidden error">This email is invalid</p>
+				</div>
+				<p id="succMessage" class="hidden">Submit Successfull!</p>
+				<p id="errorMessage" class="hidden"> Ooops! There was an error. Please try again. </p>
+			</form>
+		</div>
+		<p>Or contact me: <a href="mailto:g.sambrotta@gmail.com">g.sambrotta@gmail.com</a></p> 
+		<div class="email-confirmation">
+			<?php if(isset($errore)){ echo $errore; }else{ if(isset($ok)){ echo $ok; } } ?>
+		</div> 
+	</div>
+	<div class="clear"></div>
+	<a href="index.html"><h3 class="home">Back to home</h3></a>
+</body>
+</html>

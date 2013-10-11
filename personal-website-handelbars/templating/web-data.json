@@ -1,0 +1,155 @@
+[
+	{
+		"path": "images/web/tb/tb_web_bookbeat.jpg",
+		"alt": "Book Beat",
+		"title": "BOOK BEAT",
+		"description": "App with API, Ruby on Rails and Javascript",
+		"directLink": "https://github.com/jharzmann/BookBeat",
+		"descriptionSingle": 
+		"Project made during an hackaton in a team with Rubil on Rails developer and a designer. <br /> BookBeat is an app connected with Readmill API, the user is drive through the process to find the right track for a book choosen from him/her.",
+		
+		"pathSingle": "images/web/bookbeat1.png",
+		"altSingle": "Book Beat Focus",
+		"pathSingle2": "images/web/bookbeat2.png",
+		"altSingle2": "Book Beat Focus",
+		"pathSingle3": "images/web/bookbeat3.png",
+		"altSingle3": "Book Beat Focus"
+
+	},
+
+	{
+		"path": "images/web/tb/tb_web_dragdrop.jpg",
+		"alt": "Drag and drop",
+		"title": "DRAG AND DROP HTML5",
+		"description": "Drag and Drop App",
+		"descriptionSingle": "Online vinilys shopping developed for Mozilla Contest. <br />The drag and drop functionality is all develop in Html5",
+		"directLink": "https://developer.mozilla.org/it/demos/detail/drop-your-sound",
+		"pathSingle": "images/web/dragdrop.png",
+		"altSingle": "Drag and drop Focus"
+	},
+
+	{
+		"path": "images/web/tb/tb_web_todo.jpg",
+		"alt": "Todo List",
+		"title": "TODO LIST",
+		"description": "App with jQuery and LocalStorage",
+		"directLink": "http://designbygio.it/todo-app/todo.html",
+		"descriptionSingle": "Fancy Todo List made with jQeury. <br /> The elements are saved thanks to the Local Storage of the users browser.",
+		"pathSingle": "images/web/todo.png",
+		"altSingle": "Todo List Focus"
+	},
+
+	{
+		"path": "images/web/tb/tb_web_validation.jpg",
+		"alt": "Validation form",
+		"title": "SIGNIN WITH VALIDATION",
+		"description": "SignIn Form with jqeury validation",
+		"descriptionSingle": "Sign in form with validation client-side. <br /> In the project there is a particular attention to the UI/UX. The user can see his/her password and have different and appropriate error message for each field. <br /> Developed in Javascript/Jquery making an Ajax request.",
+		"directLink": "http://designbygio.it/validation-form/form-val.html",
+		"pathSingle": "images/web/validationform.png",
+		"altSingle": "Validation Form Focus"
+	},
+
+	{
+		"path": "images/web/tb/tb_web_survey.jpg",
+		"alt": "Php Survey",
+		"title": "CHRISTMAS SURVEY",
+		"description": "Survey make in php",
+		"descriptionSingle": "Multiple choice survey about christmas's users habits. <br /> App made in php.",
+		"directLink": "http://designbygio.it/survey/index.html",
+		"pathSingle": "images/web/survey.png",
+		"altSingle": "Absolute Vodka Focus"
+	},
+
+	{
+		"path": "images/web/tb/tb_web_nikiscakes.jpg",
+		"alt": "Niki's Cakes",
+		"title": "NIKI'S CAKES",
+		"description": "Graphic Layout and Wordpress Development",
+		"descriptionSingle": "Website for Niki's cakes Berlin Backerey. <br /> Developed with Wordpress; customized theme made with Html and Css. <br /> Facebook integration and SEO optimization.",
+		"directLink": "http://www.nikiscakes.de/",
+		"pathSingle": "images/web/cupcakes.png",
+		"altSingle": "Niki's Cakes Focus",
+		"pathSingle2": "images/web/cupcakes2.png",
+		"altSingle2": "Niki's Cakes Intern Focus"
+		
+	},
+
+	{
+		"path": "images/web/tb/tb_web_piccolipassi.jpg",
+		"alt": "Piccoli Passi",
+		"title": "PICCOLI PASSI ONLUS",
+		"description": "Graphic Layout, develop in Wordpress",
+		"descriptionSingle": "Piccoli Passi Onlus Website. <br /> Developed with Wordpress so that costums can costantly update. <br /> Customized theme made with Html and Css. Facebook integration and SEO optimization.",
+		"directLink": "http://www.associazionepiccolipassi.it",
+		"pathSingle": "images/web/piccolipassi.png",
+		"altSingle": "Piccoli Passi Focus"
+	},
+
+	{
+		"path": "images/web/tb/tb_web_studiosambrotta.jpg",
+		"alt": "Studio Sambrotta",
+		"title": "STUDIO SAMBROTTA ACCOUNTING",
+		"description": "Graphic Layout and Php",
+		"descriptionSingle": "Studio Sambrotta Accounting website. <br /> Developed with Php, html and css. Customized design.",
+		"directLink": "http://www.studiosambrotta.it",
+		"pathSingle": "images/web/studiosambrotta1.png",
+		"altSingle": "Studio Sambrotta Focus",
+		"pathSingle2": "images/web/studiosambrotta2.png",
+		"altSingle2": "Studio Sambrotta Focus"
+	},
+
+	{
+		"path": "images/web/tb/tb_web_elpaco.jpg",
+		"alt": "Eel.pa.co.",
+		"title": "EL.PA.CO.",
+		"description": "Graphic Layout and Wordpress development",
+		"descriptionSingle": "El.pa.co. Saronno accounting website. <br /> Developed with Wordpress so that costums can costantly update. <br /> Customized theme made with Html and Css.",
+		"pathSingle": "images/web/elpaco1.png",
+		"altSingle": "El.pa.co. Focus",
+		"pathSingle2": "images/web/elpaco2.png",
+		"altSingle2": "El.pa.co. Focus"
+	},
+
+	{
+		"path": "images/web/tb/tb_web_migliori.jpg",
+		"alt": "Migliori doctor",
+		"title": "MIGLIORI Doctor",
+		"description": "Html and Css3",
+		"directLink": "http://www.francomigliori.com",
+		"descriptionSingle": "Doc. Migliori surgeon website developed in pure Html and Css in collaboration with designer. <br /> Developed by Parla Parla agency in Milan.",
+		"pathSingle": "images/web/migliori1.png",
+		"altSingle": "Doct. Migliori Focus",
+		"pathSingle2": "images/web/migliori2.png",
+		"altSingle2": "Doct. Migliori Focus"
+	},
+
+	{
+		"path": "images/web/tb/tb_web_ippocampo.jpg",
+		"alt": "Ippocampo cleaning",
+		"title": "IPPOCAMPO CLEANING SERVICE",
+		"description": "Html and Css3 - Wordpress",
+		"descriptionSingle": "Cleaning Service Milan website. <br /> Developed with Wordpress so that the costum can costantly update. <br /> Customized theme made with Html and Css. <br /> In order: Homepage, service page with gallery and contact page with maps. <br /> Developed by Parla Parla agency in Milan.",
+		"pathSingle": "images/web/ippocampo1.png",
+		"altSingle": "Ippocampo cleaning Focus",
+		"pathSingle2": "images/web/ippocampo2.png",
+		"altSingle2": "Ippocampo cleaning Focus",
+		"pathSingle3": "images/web/ippocampo3.png",
+		"altSingle3": "Ippocampo cleaning Focus"
+	},
+
+
+	{
+		"path": "images/web/tb/tb_web_fournace.jpg",
+		"alt": "fournace",
+		"title": "THE FURNACE",
+		"description": "Graphic Layout",
+		"descriptionSingle": "Reinterpretation of australian Furnace Advertising agency website. <br /> Personal design, developed with Html and Css.",
+		"pathSingle": "images/web/furnace1.png",
+		"altSingle": "fournace Focus",
+		"pathSingle2": "images/web/furnace2.png",
+		"altSingle2": "fournace Focus",
+		"pathSingle3": "images/web/furnace3.png",
+		"altSingle3": "fournace Focus"
+	}
+]

@@ -1,0 +1,23 @@
+<div class="galleryContent">
+	{{#each works}}
+		<div class="thumble">
+			<img src="{{ path }}" alt="{{ alt }}"/>
+			<h2>{{ title }}</h2>
+			<p>{{ description }}</p>
+			<p><a href="{{ directLink }}" target="_blank">{{ directLink }}</a></p>
+		</div>
+	{{/each}}
+</div>
+
+
+<div class="singleWork">
+	{{#each works}}
+		<div class="single hidden">
+			<div class="closeBlack"></div>
+			<p>{{{ descriptionSingle }}}</p>
+			<img src="{{ pathSingle }}"  alt="{{ altSingle }}" />
+			<img src="{{ pathSingle2 }}"  alt="{{ altSingle2 }}" />
+			<img src="{{ pathSingle3 }}"  alt="{{ altSingle3 }}" />
+		</div>
+	{{/each}}
+</div>
