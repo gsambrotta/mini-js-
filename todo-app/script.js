@@ -57,5 +57,4 @@ $(document).ready(function() {
 		var text =  localStorage.getItem(index);
 		todoApp.restoreItem(index, text);
 	}
-
 });
