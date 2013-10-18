@@ -1,0 +1,9 @@
+/* Put your CSS here */
+html, body {
+    margin: 20px;
+}
+
+input[type="button"]{
+	width: 50px;
+	height: 30px;
+}
