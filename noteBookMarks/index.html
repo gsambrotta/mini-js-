@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Notes and bookmarks </title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<script type="text/x-handlebars" data-template-name="index"> 
+  <div class="wrap">
+    <div class="bar">
+    {{input type="text" class="search" placeholder="Where is my bookmark??" value=search action="query"}}
+
+      <div class="bar-buttons">
+        <button {{action "addNote"}}> NEW </button>
+      </div>
+    </div>
+    <aside>
+      <h4 class="all-notes">All Notes {{arrangedContent.length}}</h4>
+        {{#each item in arrangedContent}}
+          <li>
+            {{#link-to 'note' item}} {{item.title}} {{/link-to}}
+          </li>
+        {{/each}}
+    </aside>
+    {{outlet}}
+  </div> 
+</script>
+
+ <script type="text/x-handlebars" data-template-name="new"> 
+   <section>
+    <div class="note">
+      {{input type="text" placeholder="Title" value=newTitle action="createNote"}}
+      <div class="error" id="error" style="display:none"> Fill in the Title! </div>
+
+      {{input type="text" placeholder="What you need to remember?" value=newBody action="createNote"}}
+      {{input type="text" placeholder="Url:" value=newUrl action="createNote"}}
+    </div>
+   </section>
+ </script>
+
+  <script type="text/x-handlebars" data-template-name="note"> 
+    <section>
+        <div class="note">
+            {{#if isEditing}}
+              <h2 class="note-title input-title"> {{edit-input-note value=title focus-out="modified" insert-newline="modified"}} </h2>
+              <p class="input-body"> {{edit-area-note value=body focus-out="modified" insert-newline="modified"}} </p>
+              {{edit-input-note value=url focus-out="modified" insert-newline="modified"}}
+            {{else}}
+              <h2 {{action "editNote" on="doubleClick"}} class="note-title" > {{title}} </h2>
+              <button {{action "removeNote"}} class="delete"> Delete </button>
+              <p {{action "editNote" on="doubleClick"}}> {{body}} </p>
+              {{input type="text" placeholder="URL:" class="input"  value=url }}
+            {{/if}}
+        </div>
+      </section>
+  </script>
+
+
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
+  <script src="js/libs/ember-1.1.2.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/models/note_model.js"></script>
+  <script src="js/controllers/index_controller.js"></script>
+  <script src="js/controllers/note_controller.js"></script>
+  <script src="js/controllers/new_controller.js"></script>
+  <script src="js/views/edit_note_view.js"></script>
+</body>
+</html>
