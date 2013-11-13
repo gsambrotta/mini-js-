@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8 />
+<meta charset="utf-8"/>
 <title>Ember Color Picker</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <script type="text/x-handlebars" data-template-name="application">
-    <h1>Color Picker</h1>
-    {{outlet}}
-  </script>
-
   <script type="text/x-handlebars" data-template-name="index">
-    <h2>Pick your own color and save it 
-      <p>{{rgba}}</p>
-    </h2>
-    <form>
-      <label for="name">Color name</label>
-      <input type="text" id="name" value="">
+    <h1>Pick your own color and save it </h1>
+    <form id="form">
+      <label for="name">Color name
+        {{input type="text" id="name"  value=colorNameValue }}
+      </label>
 
-      <label for="red">RED</label>
-      <input type="range" min="0" max="255" step="1" value="0" id="red" >
+      <label for="red">Red
+        {{input type="range" class="red" min="0" max="255" step="1" value=redValue id="red"}}
+      </label>
 
-      <label for="green">Green</label>
-      <input type="range" min="0" max="255" step="1" value="0" id="green" >
+      <label for="green">Green
+        {{input type="range" class="green" min="0" max="255" step="1" value=greenValue id="green"}}
+      </label>
+      
+      <label for="blue">Blue
+        {{input type="range" class="blue" min="0" max="255" step="1" value=blueValue id="blue"}}
+      </label>
 
-      <label for="blue">Blue</label>
-      <input type="range" min="0" max="255" step="1" value="0" id="blue">
+      <label for="alpha">Alpha
+        {{input type="range" class="alpha" min="0" max="1" step="0.1" value=alphaValue id="alpha"}}
+      </label>
 
-      <label for="alpha">Alpha</label>
-      <input type="range" min="0" max="1" step="0.1" value="0" id="alpha">
-
-      <input type="button" id="save" value="Save" />
-      <button {{action 'save'}} > Save </button>
+      <input type="button" value="Save" {{ action save }} />
     </form>
 
-    {{outlet}}
-    </script>
-    
-    <script type="text/x-handlebars" data-template-name="select">
-      <select id="listColors">
-        <option value="">Choose your color</option>
-        <option {{action 'selected'}}> {{color.name}} </option>
-      </select>
-      <span style="color: {{color.color}}"> {{color.name}} </span>
+    {{ view Ember.Select content=model optionLabelPath="content.name" prompt="Choose your color" value=selectedColor}}
+
+    <p {{bind-attr style="selectedStyle" id="textColor"}}>{{selectedColor.name}}</p>    
 
   </script>
 
+
   <script src="js/libs/jquery-1.9.1.js"></script>
-  <script src="js/libs/handlebars-1.0.0-rc.3.js"></script>
-  <script src="js/libs/ember-1.0.0-rc.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
+  <script src="js/libs/ember-1.1.2.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+  <script src="js/libs/localstorage_adapter.js"></script>
+  
   <script src="js/app.js"></script>
 
 </body>

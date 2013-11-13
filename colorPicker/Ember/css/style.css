@@ -1,9 +1,54 @@
 /* Put your CSS here */
+
 html, body {
     margin: 20px;
 }
 
+.clear { clear: both;}
+
+form {
+	width: 216px;
+	float:left;
+}
+
+form label {
+	display: block;
+}
+
+.name{
+	display: inline;
+}
+
+.red {margin-left: 44px;}
+.green { margin-left: 31px;}
+.blue {margin-left: 40px;}
+.alpha {margin-left: 31px;}
+
+
 input[type="button"]{
 	width: 50px;
 	height: 30px;
+	margin-top: 28px;
+	float: right;
+}
+
+#listColors {
+	margin-left: 84px;
+	display: inline;
+	width: 200px;
+}
+
+
+span {
+	display: inline;
+	margin-left: 20px;
+}
+
+span b { 
+	text-transform: uppercase; 
+}
+
+p {
+	margin-top: 28px;
+	float: left;
 }
