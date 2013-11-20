@@ -1,0 +1,50 @@
+@import 'variables';
+
+* { margin: 0px; padding: 0px; border: none; }
+
+.navbar{
+	.logo {
+		background: $logo;
+		width: 204px;
+		height: 59px;
+		background-repeat: no-repeat;
+		margin: 10px -3px;
+		float: left;
+	}
+	ul {
+		margin-top: 30px;
+		li {
+			display: inline;
+			&:first-child { margin-right: 40px; }
+			input {
+				display: inline;
+				width: auto;
+			}
+		}
+	}
+}
+.navbar.menu {
+	position: fixed;
+	top: 80px;
+	width: 100%;
+	.navbar-collapse {
+		margin: 0 105px;
+		ul {
+			margin-top: 0px;
+			li:first-child { margin: 0px;}
+		}
+	}
+} 
+
+
+.container.main {
+	margin-top: 125px;
+}	
+
+/* CAROUSEL */
+.carousel {
+	background: #000;
+	width: 100%;
+	height: 200px;
+	position: inherit!important;
+}

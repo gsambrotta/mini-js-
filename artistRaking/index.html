@@ -1,0 +1,41 @@
+<!Doctype>
+<html>
+	<head>
+		<meta charset="utf=8">
+		<title>Artist Raking</title>
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+	<script type="text/x-handlebars" data-template-name="index">
+		<header>
+			<div class="logo"></div>
+			<ul>
+				<li><a href="#"> discover </a></li>
+			</ul>
+			<input text="text" class="search">
+		</header>
+		<div class="wrap">
+			{{outlet}}
+		</div>
+			
+		<footer>
+		<p>&#169; copyright 2013 RankArt </p>
+		</footer>
+	</script>
+
+
+
+	<script src="js/libs/jquery-1.9.1.js"></script>
+	<script src="js/libs/handlebars-1.0.0.js"></script>
+	<script src="js/libs/ember-1.1.2.js"></script>
+	<script src="js/libs/ember-data.js"></script>
+	<script src="js/libs/bootstrap.js"></script>
+	<script src="js/libs/bootstrap.min.js"></script>
+
+	<script src="js/app.js"></script>
+	<script src="js/router.js"></script>
+	<script src="js/models/categories.js"></script>
+
+	<script src="templates/home.hbs"></script>
+	</body>
+</html>

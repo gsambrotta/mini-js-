@@ -1,0 +1,47 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+    	{{#linkTo "home"}} <div class="logo"></div>{{/linkTo}}
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-right">
+        <li>{{#linkTo "categories"}} discover {{/linkTo}} </li>
+        <li>  <input type="text" placeholder="Search" class="form-control"></li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
+</div>
+<!-- Static navbar -->
+<div class="navbar navbar-default menu" role="navigation">
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      {{! #each item in model }}
+        <li class="active">{{#linkTo "home"}} Music {{/linkTo}}</li>
+        <li>{{#linkTo "home"}} Art {{/linkTo}}</li>
+        <li>{{#linkTo "home"}} Video {{/linkTo}}</li>
+        <li>{{#linkTo "home"}} Other {{/linkTo}}</li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li>{{#linkTo "home"}} Action {{/linkTo}}</li>
+          </ul>
+        </li>
+        {{! /each }}
+    </ul>
+  </div>  
+<!--/.nav-collapse -->
+</div>
+
+
+<div class="container main">
+
+{{outlet}}
+    
+</div>
+
+<div class="container footer">
+	<hr>    
+	<footer>
+	    <p>&#169; copyright 2013 RankArt </p>
+	</footer>
+</div>
