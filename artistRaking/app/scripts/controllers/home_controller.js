@@ -1,22 +1,26 @@
 ArtRank.HomeController = Ember.ObjectController.extend({
 	photoIndex: 0,
-    photoTimer: null,
 
     actions: {
-        nextPhoto: function() {    
-            this.set('photoIndex', this.get('photoIndex') + 1);
-            var items;
-
+        nextPhoto: function() {
+            this.nextPhoto();
         },
         prevPhoto: function() {
-            this.set('photoIndex', this.get('photoIndex') - 1);
+            var curPhotoIndex = this.get('photoIndex') - 1;
+            if (curPhotoIndex == -1 ) {
+                curPhotoIndex = this.get('photos').length - 1;
+            }
+            this.set('photoIndex', curPhotoIndex);
         }
     },
 
-    nextPhoto: function() {    
-            this.set('photoIndex', this.get('photoIndex') + 1);
-            var items;
-
+    nextPhoto: function() {
+            var curPhotoIndex = this.get('photoIndex') + 1;
+            if (curPhotoIndex == this.get('photos').length) {
+                curPhotoIndex = 0;
+            }
+            this.set('photoIndex', curPhotoIndex);
+             
     },
 
     init: function() {
@@ -28,8 +32,12 @@ ArtRank.HomeController = Ember.ObjectController.extend({
         }, 3000));
     },
 
+    photos: function() {
+        console.log(this.get('model').content);
+        return this.get('model').content;
+    }.property(),
+
     arrangedContent: function() {
-        //console.log(this.get('model').content);
         return this.get('model').content[this.get("photoIndex")];
     }.property("photoIndex")
 

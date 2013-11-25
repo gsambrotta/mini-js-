@@ -11,30 +11,41 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 Ember.TEMPLATES["home"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, hashTypes, hashContexts, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  var buffer = '', stack1, stack2, hashTypes, hashContexts, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
+function program1(depth0,data) {
+  
+  var buffer = '', stack1, hashContexts, hashTypes, options;
+  data.buffer.push("\n      <a href=\"#\" class=\"img-thumbnail col-md-4\">\n          <img ");
+  hashContexts = {'src': depth0};
+  hashTypes = {'src': "ID"};
+  options = {hash:{
+    'src': ("item.imageUrl")
+  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers['bind-attr'] || depth0['bind-attr']),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "bind-attr", options))));
+  data.buffer.push(" alt=\"\"/>\n          ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "item.imageTitle", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("\n      </a>\n    ");
+  return buffer;
+  }
 
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers.partial || depth0.partial),stack1 ? stack1.call(depth0, "photo", options) : helperMissing.call(depth0, "partial", "photo", options))));
-  data.buffer.push("\n\n<section class=\"box-photos\">\n  <h2>Last voted Artists</h2>\n  <div class=\"row\">\n    <a href=\"#\" class=\"img-thumbnail col-md-4\">\n       ");
-  data.buffer.push("\n      <img ");
-  hashContexts = {'src': depth0};
-  hashTypes = {'src': "ID"};
-  options = {hash:{
-    'src': ("arrangedContent.imageUrl")
-  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers['bind-attr'] || depth0['bind-attr']),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "bind-attr", options))));
-  data.buffer.push(" alt=\"\" />\n         ");
-  data.buffer.push("\n    </a>\n\n    <a href=\"#\" class=\"img-thumbnail col-md-4\">\n      <img ");
-  hashContexts = {'src': depth0};
-  hashTypes = {'src': "ID"};
-  options = {hash:{
-    'src': ("arrangedContent.imageUrl")
-  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers['bind-attr'] || depth0['bind-attr']),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "bind-attr", options))));
-  data.buffer.push(" alt=\"\">\n    </a>\n    <a href=\"#\" class=\"img-thumbnail col-md-4\">\n      <img src=\"http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-01.jpg\" alt=\"\">\n    </a>\n  </div>\n</section>\n\n<section class=\"box-photos\">\n  <h2>New Artists</h2>\n  <div class=\"row\">\n    <a href=\"#\" class=\"img-thumbnail col-md-4\">\n      <img src=\"http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-01.jpg\" alt=\"\">\n    </a>\n    <a href=\"#\" class=\"img-thumbnail col-md-4\">\n      <img src=\"http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-01.jpg\" alt=\"\">\n    </a>\n    <a href=\"#\" class=\"img-thumbnail col-md-4\">\n      <img src=\"http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-01.jpg\" alt=\"\">\n    </a>    \n  </div>\n</section>\n\n\n\n");
+  data.buffer.push("\n\n<section class=\"box-photos\">\n  <h2>Last voted Artists</h2>\n  <div class=\"row\">\n    ");
+  hashTypes = {};
+  hashContexts = {};
+  stack2 = helpers.each.call(depth0, "item", "in", "photos", {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
+  if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
+  data.buffer.push("\n  </div>\n</section>\n\n<section class=\"box-photos\">\n  <h2>New Artists</h2>\n  <div class=\"row\">\n    ");
+  hashTypes = {};
+  hashContexts = {};
+  stack2 = helpers.each.call(depth0, "item", "in", "photos", {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
+  if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
+  data.buffer.push("\n  </div>\n</section>\n\n\n\n");
   return buffer;
   
 });

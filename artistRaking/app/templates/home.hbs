@@ -3,33 +3,24 @@
 <section class="box-photos">
   <h2>Last voted Artists</h2>
   <div class="row">
-    <a href="#" class="img-thumbnail col-md-4">
-       {{!-- {{#each item in photo}} --}}
-      <img {{bind-attr src=arrangedContent.imageUrl}} alt="" />
-         {{!--  {{/each}}--}}
-    </a>
-
-    <a href="#" class="img-thumbnail col-md-4">
-      <img {{bind-attr src=arrangedContent.imageUrl}} alt="">
-    </a>
-    <a href="#" class="img-thumbnail col-md-4">
-      <img src="http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
-    </a>
+    {{#each item in photos}}
+      <a href="#" class="img-thumbnail col-md-4">
+          <img {{bind-attr src=item.imageUrl}} alt=""/>
+          {{item.imageTitle}}
+      </a>
+    {{/each}}
   </div>
 </section>
 
 <section class="box-photos">
   <h2>New Artists</h2>
   <div class="row">
-    <a href="#" class="img-thumbnail col-md-4">
-      <img src="http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
-    </a>
-    <a href="#" class="img-thumbnail col-md-4">
-      <img src="http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
-    </a>
-    <a href="#" class="img-thumbnail col-md-4">
-      <img src="http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
-    </a>    
+    {{#each item in photos}}
+      <a href="#" class="img-thumbnail col-md-4">
+          <img {{bind-attr src=item.imageUrl}} alt=""/>
+          {{item.imageTitle}}
+      </a>
+    {{/each}}
   </div>
 </section>
 
