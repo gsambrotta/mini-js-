@@ -1,15 +1,31 @@
 ArtRank.HomeController = Ember.ObjectController.extend({
 	photoIndex: 0,
+    photoTimer: null,
 
     actions: {
-        nextPhoto: function() {
-            console.log(this);
+        nextPhoto: function() {    
             this.set('photoIndex', this.get('photoIndex') + 1);
+            var items;
 
         },
         prevPhoto: function() {
-            //console.log('prevPhoto');
+            this.set('photoIndex', this.get('photoIndex') - 1);
         }
+    },
+
+    nextPhoto: function() {    
+            this.set('photoIndex', this.get('photoIndex') + 1);
+            var items;
+
+    },
+
+    init: function() {
+        var controller = this;
+        this.set('photoTimer', setInterval(function(){
+            Ember.run(function() {
+                controller.nextPhoto();
+            });
+        }, 3000));
     },
 
     arrangedContent: function() {

@@ -19,12 +19,6 @@ ArtRank.HomeRoute = Ember.Route.extend({
 	}
 });
 
-ArtRank.PhotoRoute = Ember.Route.extend({
-	model: function() {
-		 return this.store.find('photo');
-	}
-});
-
 ArtRank.ProfileRoute = Ember.Route.extend({
 	model: function() {
 		// this.get ('store');
