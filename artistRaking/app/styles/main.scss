@@ -1,6 +1,7 @@
 @import 'variables';
 
 * { margin: 0px; padding: 0px; border: none; }
+ul, li { list-style: none; }
 
 .navbar{
 	.logo {
@@ -38,13 +39,43 @@
 
 
 .container.main {
-	margin-top: 125px;
+	margin-top: 145px;
 }	
 
 /* CAROUSEL */
-.carousel {
+.photos-wrap {
 	background: #000;
 	width: 100%;
-	height: 200px;
+	height: 300px;
+	overflow: hidden;
 	position: inherit!important;
+		ul.photoItemWrap{
+			width: 1920px;
+			height: 100%;
+			margin: 0 auto;
+				li {
+					//width: 100%;
+					height: 100%;
+					float: left;
+					background-repeat: no-repeat;
+					border-radius: 6px;
+					position: inherit;
+						img {
+							//width: 100%;
+							margin: 0 auto;
+						}
+				}
+		}
 }
+
+.box-photos {
+	a { position: inherit; 
+		img{
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
+		}
+	}		
+} 
+
+

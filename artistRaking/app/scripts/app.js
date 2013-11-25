@@ -1,5 +1,7 @@
-ArtRank = window.ArtRank = Ember.Application.create();
+window.ArtRank = Ember.Application.create();
 
-ArtRank.Store = DS.Store.create({
-//    adapter:  "DS.RESTAdapter"
-});
+/*ArtRank.store = DS.Store.create({
+    adapter:  "DS.RESTAdapter"
+});*/
+
+ArtRank.ApplicationAdapter = DS.FixtureAdapter.extend();
