@@ -1,0 +1,25 @@
+{{#each item in arrangedContent}}
+<section class="col-md-12">
+	<img src="http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg" alt="profile" width="250" class="profile-img"/>
+	<div class="info">
+		<h2>{{item.name}}</h2>
+		<h2>{{item.nickname}}</h2>
+		<h3>{{item.field}}</h3>
+		<h3>{{item.city}}</h3>
+	</div>
+</section>
+<section class="col-md-12">
+	<h3>Bio</h3>
+	<p>{{item.bio}}</p>
+</section>
+<section class="col-md-12">
+	<h3>Portfolio</h3>
+
+</section>
+<section class="col-md-12">
+	<h3>Give your vote!</h3>
+	<div class="form-group col-md-4">
+		<input type="text" class="vote form-control" placeholder="Write here a category" />
+	</div>
+</section>
+{{/each}}

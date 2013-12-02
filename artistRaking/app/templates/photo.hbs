@@ -1,12 +1,16 @@
 <div class="row">
+	<div class="imageTitleGallery"> 
+		<h2>{{arrangedContent.imageTitle}}</h2>
+	</div>
 	<div class="photos-wrap col-md-12">
 	    <ul class="photoItemWrap">
-	        <li class="col-md-12"><img class="photoItem" {{bind-attr src=arrangedContent.imageUrl}} /> </li>
-	        {{arrangedContent.imageTitle}}
+	        <li class="col-md-12">
+	        	<img class="photoItem" {{bind-attr src=arrangedContent.imageUrl}} alt="" /> 
+	        </li>
 	    </ul>
    </div>
    <div class="controlButtons">
-        <button type="button" class="btn btn-default" {{action "prevPhoto"}}>Prev</button>
-        <button type="button" class="btn btn-default" {{action "nextPhoto"}}>Next</button>
+        <button type="button" class="btn btn-default left" {{action "prevPhoto" target="view"}}>< </button>
+        <button type="button" class="btn btn-default right" {{action "nextPhoto" target="view"}}> > </button>
     </div>    
 </div>

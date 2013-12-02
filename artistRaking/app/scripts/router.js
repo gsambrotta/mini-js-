@@ -4,7 +4,7 @@ ArtRank.Router.map(function (){
 			this.resource("photo", {path: ':photo_id'});
 		});
 		this.resource('categories', { path: "/categories" });
-		this.resource('profile', { path: "/profile" });
+		this.resource('artists', { path: "/artists" });
 	});
 });
 
@@ -20,14 +20,14 @@ ArtRank.HomeRoute = Ember.Route.extend({
 	}
 });
 
-ArtRank.ProfileRoute = Ember.Route.extend({
+ArtRank.ArtistsRoute = Ember.Route.extend({
 	model: function() {
-		// this.get ('store');
+		return this.store.find('artists');
 	}
 });
 
 ArtRank.CategoriesRoute = Ember.Route.extend({
 	model: function() {
-		// this.get ('store');
+		 return this.store.find('categories');
 	}
 });

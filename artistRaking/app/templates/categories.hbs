@@ -1,0 +1,11 @@
+{{#each item in arrangedContent}}
+	<section class="categories">
+		<h2>{{item.catTitle}}</h2>
+		<div class="thumbs">
+			<div class="thumb-up" {{action "voteUp" }} ></div>
+			<div class="thumb-down" {{action "voteDown" }} ></div>
+		</div>
+		<div class="clear"></div>
+		<hr>
+	</section>
+{{/each}} 

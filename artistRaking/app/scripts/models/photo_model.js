@@ -16,7 +16,7 @@ ArtRank.Photo.FIXTURES = [
 	 },
 	 {
 	   id: 3,
-	   imageTtitle: 'Profit!',
+	   imageTitle: 'Profit!',
 	   imageUrl: 'http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-03.jpg'
 	 }
 ];
