@@ -1,0 +1,57 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>The worst Twitter ever</title>
+		<link rel="stylesheet" href="style.css">		
+		<script src="lib/jquery-2.0.3.min.js"></script>
+		<script src="lib/underscore-min.js"></script>
+		<script src="lib/handlebars-v1.1.2.js"></script>
+		<script src="lib/backbone.js"></script>
+		<script src="lib/backbone.localStorage.js"></script>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script type="x/handlebars-v1" id="indexView">
+		<div class="wrap">
+			<section class="addComment">
+				<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
+				<textarea rows="4" cols="70" class="message"></textarea>
+				<div class="icons">
+					<div class="edit">E</div>					
+					<div class="delete">X</div>					
+				</div>
+				<div class="footer-post">
+					<button>SEND</button>
+					<div class="clear"></div>
+				</div>
+			</section>
+			{{#each comments}}
+			<section id="new-comment">
+			</section>
+			<section>
+				<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
+				<div class="body">
+				<div class="icons">
+					<div class="hide">H</div>					
+					<div class="delete">X</div>					
+				</div>
+					<ul class="user-contact">
+						<li><b>{{name}}</b></li>
+						<li>{{nickname}}</li>
+						<li>{{time}}</li>
+					</ul>
+					<p>{{body}}</p>
+				</div>
+			</section>
+			{{/each}}	
+		</div>
+		</script>
+
+		<script src="CommentModel.js"></script>
+		<script src="ListCommentCollection.js"></script>
+		<script src="CommentView.js"></script>
+
+		<script src="app.js"></script>
+	</body>
+</html>

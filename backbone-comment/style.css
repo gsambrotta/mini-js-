@@ -1,0 +1,101 @@
+* {padding: 0px; margin:0px; border: none;}
+ul, li { list-style: none;}
+
+.clear {
+	clear: both;
+}
+
+
+.wrap {
+	width: 50%;
+	margin: 0 auto;
+	background: #fff;   
+    border: 1px solid #444;
+    border-radius: 6px;
+    margin-top: 40px;
+}
+
+section {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0px 1px #ccc;
+    margin: 7px 5px 15px 5px;
+    border-radius: 6px;
+}
+
+section img {
+    border-radius: 6px;
+    padding: 7px;
+    float: left;
+}
+
+.footer-post {
+    background: #444;
+    height: 45px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.footer-post button {
+	float: right;
+	margin: 10px;
+    width: 100px;
+    border-radius: 4px;
+    background: #fff;
+    padding: 5px 0;
+}
+
+.footer-post button:hover {
+    background: #efefef;    
+}
+
+.message {
+	min-height: 70px;
+	padding: 5px 3px;
+	border-radius: 6px;
+	background: #eee;
+}
+
+.body {
+    padding: 5px 0;
+}
+
+.user-contact li {
+    display: inline;
+}
+.user-contact li:last-child {
+   float: right;
+    margin-right: 10px;
+}
+
+.body p{
+	min-height: 50px;
+	padding: 7px 0;
+}
+
+.icons {
+	float: right;
+	position: relative;
+	top: 10px;
+	right: -44px;
+}
+
+.edit, .hide {
+	background: #444;
+	width: 30px;
+	height: 20px;
+	margin-bottom: 7px;
+	color: #fff;
+	padding-left: 9px;
+	padding-top: 3px;
+}
+
+.delete {
+	background: #444;
+	width: 30px;
+	height: 20px;
+	color: #fff;
+	padding-left: 9px;
+	padding-top: 3px;
+
+}
