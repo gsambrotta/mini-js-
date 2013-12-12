@@ -1,0 +1,175 @@
+* {padding: 0px; margin:0px; border: none;}
+ul, li { list-style: none;}
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+body {
+	background: #16a085;
+}
+
+button {
+	padding: 6px 5px;
+	background: #fefefe;
+	border-radius: 6px;
+	width: 20%;
+}
+
+
+.wrap {
+	width: 50%;
+	margin: 0 auto;
+	background: #fff;
+	padding: 10px 5px;   
+}
+
+.wrap.new-wrap {
+	margin-top: 40px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	margin-bottom: -5px;
+	box-shadow: 2px -2px 4px #137965;
+}
+
+.wrap.list{
+	margin-bottom: 40px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	box-shadow: 2px 3px 4px #137965;
+}
+
+section {
+    background: #ecf0f1;
+	border-bottom: 1px solid #eee;
+	box-shadow: 0px 2px 3px #D2D5D6;
+    margin: 7px 5px 15px 5px;
+    border-radius: 6px;
+}
+
+section img {
+    border-radius: 6px;
+    padding: 7px;
+    float: left;
+}
+
+
+.join-text {
+	margin: 7px;
+	width: 88%;
+	height: 70px;
+	font-size: 1em;
+	padding: 5px 7px;
+	max-width: 500px;
+}
+
+.login {
+	margin: 10px 15px 14px;
+}
+
+.hide-login {
+	padding-top: 1px;
+}
+
+.login input {
+	padding: 5px;
+	margin-left: 10px;
+}
+
+.footer-post {
+    background: #16A085;
+    height: 45px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.footer-post button {
+	float: right;
+	margin: 10px;
+    width: 100px;
+    border-radius: 4px;
+    background: #fff;
+    padding: 5px 0;
+}
+
+.footer-post button:hover {
+    background: #efefef;    
+}
+
+#name, #nickname {
+	padding: 2px 3px;
+	margin-top: 6px;
+	border-radius: 3px
+}
+
+.message {
+	min-height: 70px;
+	padding: 5px 3px;
+	border-radius: 6px;
+	background: #eee;
+	min-width: 80%;
+	max-width: 100%;
+	width: 89%;
+	position: relative;
+	margin: -21px 0 7px 48px;
+}
+
+.body {
+    padding: 5px 0;
+}
+
+.user-contact li {
+    display: inline;
+}
+.user-contact li:last-child {
+   float: right;
+    margin-right: 10px;
+}
+
+.body p{
+	min-height: 50px;
+	padding: 7px 0;
+}
+
+.icons {
+	float: right;
+	position: relative;
+	top: -4px;
+	right: -44px;
+}
+
+.edit, .hide {
+	background: #fd6e6e;
+	width: 30px;
+	height: 20px;
+	margin-bottom: 7px;
+	color: #fff;
+	padding-left: 9px;
+	padding-top: 3px;
+}
+
+.delete {
+	background: #444;
+	width: 30px;
+	height: 20px;
+	color: #fff;
+	padding-left: 9px;
+	padding-top: 3px;
+
+}
+
+.hide-message {
+	text-align: center;
+	padding: 9px 5px;
+}
+
+
+button#undo {
+	margin-left: 27%;
+	margin-right: 20px;
+	margin-bottom: 16px;
+}

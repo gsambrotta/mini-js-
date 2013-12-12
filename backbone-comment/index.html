@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>The worst Twitter ever</title>
-		<link rel="stylesheet" href="style.css">		
+		<link rel="stylesheet" href="app/css/style.css">
+		<link rel="stylesheet" href="app/css/font-awesome/css/font-awesome.min.css">		
 		<script src="lib/jquery-2.0.3.min.js"></script>
 		<script src="lib/underscore-min.js"></script>
 		<script src="lib/handlebars-v1.1.2.js"></script>
@@ -11,47 +12,89 @@
 		<script src="lib/backbone.localStorage.js"></script>
 	</head>
 	<body>
-		<div id="app"></div>
-		<script type="x/handlebars-v1" id="indexView">
-		<div class="wrap">
+	<script>
+		
+	</script>
+
+		<div class="wrap new-wrap" id="wrap-login"></div>
+		<script type="text/x-handlebars-template" id="newComment">
+		<div id="new-comment">
+		{{#if loggedin}}
 			<section class="addComment">
 				<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
-				<textarea rows="4" cols="70" class="message"></textarea>
-				<div class="icons">
-					<div class="edit">E</div>					
-					<div class="delete">X</div>					
-				</div>
+				<input text="type" id="name" placeholder="Name">
+				<input text="type" id="nickname" placeholder="@nickname">
+				<textarea class="message"></textarea>
 				<div class="footer-post">
-					<button>SEND</button>
+					<button id="send">SEND</button>
+					<button id="cancel">CANCEL</button>
 					<div class="clear"></div>
 				</div>
 			</section>
-			{{#each comments}}
-			<section id="new-comment">
-			</section>
-			<section>
-				<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
-				<div class="body">
-				<div class="icons">
-					<div class="hide">H</div>					
-					<div class="delete">X</div>					
-				</div>
-					<ul class="user-contact">
-						<li><b>{{name}}</b></li>
-						<li>{{nickname}}</li>
-						<li>{{time}}</li>
-					</ul>
-					<p>{{body}}</p>
+		{{ else }}
+			<section id="join-section">
+				<img src="app/img/newavatar.png" width="35" />
+				<textarea disabled class="join-text" placeholder="Join the discussion..." ></textarea>
+				<div class="footer-post">
+					<button id="join">JOIN</button>
+					<div class="clear"></div>
 				</div>
 			</section>
-			{{/each}}	
+			<section id="login-section" class="hide-login hidden">
+				<form class="login">
+					<label>Id</label>
+					<input type="text" id="ID" value="" />
+					<label>Password</label>
+					<input type="password" id="psw" value="" />
+				</form>
+				<div class="footer-post">
+					<button id="login">LOGIN</button>
+					<div class="clear"></div>
+				</div>
+			</section>
+		{{/if}}
 		</div>
 		</script>
 
-		<script src="CommentModel.js"></script>
-		<script src="ListCommentCollection.js"></script>
-		<script src="CommentView.js"></script>
+		<div class="wrap list" id="wrap-list"></div>
+		<script type="text/x-handlebars-template" id="commentList">
+		<div id="commentList">
+		{{#each comments}}
+		<section id="comment" class="comment">
+			<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
+			<div class="body">
+			<div class="icons">
+				<div class="hide" id="hide"><i class="fa fa-eye"></i>
+				</div>					
+				{{!-- <div class="delete" id="delete">X</div>--}}					
+			</div>
+				<ul class="user-contact">
+					<li><b>{{name}}</b></li>
+					<li>{{nickname}}</li>
+					<li>{{time}}</li>
+				</ul>
+				<p>{{body}}</p>
+			</div>
+		</section>
+		<section id="hiddenComment" style="display: none">
+			<p class="hide-message"><b>You just hide the comment from this user</b></p>
+			<button id="undo">Undo</button>
+			<button>Send Feedback</button>
+		</section>
+		{{/each}}
+		</div>
+		</script>	
+		
 
-		<script src="app.js"></script>
+		<script src="app/models/CommentModel.js"></script>
+		<script src="app/models/NewCommentModel.js"></script>
+
+		<script src="app/collections/ListCommentCollection.js"></script>
+		<script src="app/collections/NewCommentCollection.js"></script>
+
+		<script src="app/views/CommentListView.js"></script>
+		<script src="app/views/NewCommentView.js"></script>
+
+		<script src="app/app.js"></script>
 	</body>
 </html>

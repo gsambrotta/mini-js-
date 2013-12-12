@@ -1,0 +1,81 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>The worst Twitter ever</title>
+		<link rel="stylesheet" href="style.css">		
+		<script src="lib/jquery-2.0.3.min.js"></script>
+		<script src="lib/underscore-min.js"></script>
+		<script src="lib/handlebars-v1.1.2.js"></script>
+		<script src="lib/backbone.js"></script>
+		<script src="lib/backbone.localStorage.js"></script>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script type="x/handlebars-v1" id="indexView">
+		<div class="wrap">
+			{{#if loggedin}}
+			<section class="addComment">
+				<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
+				<textarea rows="4" cols="70" class="message"></textarea>
+				<div class="icons">
+					<div class="edit">E</div>					
+					<div class="delete">X</div>					
+				</div>
+				<div class="footer-post">
+					<button>SEND</button>
+					<div class="clear"></div>
+				</div>
+			</section>
+			{{ else }}
+			<section>
+				<img src="img/newavatar.png" width="35" />
+				<textarea disabled class="join-text" placeholder="Join the discussion..." ></textarea>
+				<div class="footer-post">
+					<button>JOIN</button>
+					<div class="clear"></div>
+				</div>
+			</section>
+			<section class="hide-login">
+				<div class="login">
+					<label>Id</label>
+					<input type="text" name="id"/>
+					<label>Passwrod</label>
+					<input type="password" name="pass"/>
+				</div>
+				<div class="footer-post">
+					<button>LOGIN</button>
+					<div class="clear"></div>
+				</div>
+			</section>
+			{{/if }}
+
+			{{#each comments}}
+			<section id="new-comment">
+			</section>
+			<section>
+				<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
+				<div class="body">
+				<div class="icons">
+					<div class="hide">H</div>					
+					<div class="delete">X</div>					
+				</div>
+					<ul class="user-contact">
+						<li><b>{{name}}</b></li>
+						<li>{{nickname}}</li>
+						<li>{{time}}</li>
+					</ul>
+					<p>{{body}}</p>
+				</div>
+			</section>
+			{{/each}}	
+		</div>
+		</script>
+
+		<script src="CommentModel.js"></script>
+		<script src="ListCommentCollection.js"></script>
+		<script src="CommentView.js"></script>
+
+		<script src="app.js"></script>
+	</body>
+</html>
