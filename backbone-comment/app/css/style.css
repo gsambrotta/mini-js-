@@ -18,6 +18,7 @@ button {
 	background: #fefefe;
 	border-radius: 6px;
 	width: 20%;
+	cursor: pointer;
 }
 
 
@@ -32,7 +33,7 @@ button {
 	margin-top: 40px;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
-	margin-bottom: -5px;
+	margin-bottom: -21px;
 	box-shadow: 2px -2px 4px #137965;
 }
 
@@ -138,29 +139,49 @@ section img {
 .icons {
 	float: right;
 	position: relative;
-	top: -4px;
-	right: -44px;
+	top: 3px;
+	right: -45px;
+	cursor: pointer;
 }
 
-.edit, .hide {
+.fa {
+	margin-top: -20px;
+}
+
+.fa.fa-pencil {
+	margin-top: 0px;
+}
+
+.hide, .delete {
+	float: right;
+	position: relative;
+	right: 4px;
+	width: 37px;
+	height: 24px;
+	background: transparent;
+	z-index: 100;
+	cursor: pointer;
+}
+
+
+.box-icon {
 	background: #fd6e6e;
 	width: 30px;
 	height: 20px;
 	margin-bottom: 7px;
 	color: #fff;
-	padding-left: 9px;
+	padding-left: 14px;
 	padding-top: 3px;
 }
 
-.delete {
+.box-icon.pink {
+	background: #fd6e6e;
+}
+
+.box-icon.black {
 	background: #444;
-	width: 30px;
-	height: 20px;
-	color: #fff;
-	padding-left: 9px;
-	padding-top: 3px;
-
 }
+
 
 .hide-message {
 	text-align: center;

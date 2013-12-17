@@ -2,52 +2,40 @@
 		template: Handlebars.compile($('#commentList').html()),
 
 		events: {
-			'click #send': 'submit',
-			'click #cancel': 'cancel',
-			'click #hide': 'hideComment',
-			'click #undo': 'undoHiddenComment'
+			'click .hide': 'hideComment',
+			'click #undo': 'undoHiddenComment',
+			'click .delete': 'deleteComment',
+			'click .edit': 'editComment'
 		},
 
 		initialize: function() {
 			var self = this;
-			this.collection = new ListCommentCollection();
-			this.collection.fetch().then(function(){ 
+			this.collection.bind('change', function(){ 
 				self.render();
 			});
 		},
 
-		submit: function(event){
-			var name = $('#name').val();
-			var nickname = $('#nickname').val();
-			var message = $('textarea').val();
-			var commentModel = new CommentModel({
-				name: name,
-				nickname: nickname, 
-				body: message
-			});
-			this.collection.create(commentModel);
-			this.render();
-		}, 
-
-		cancel: function() {
-			$('#name').val("");
-			$('#nickname').val("");
-			$('textarea').val("");
+		hideComment: function(evt) {
+			var hideButton = $(evt.target);
+			var hiddenComm = $('.hiddenComment');
+			hideButton.parent().parent().hide();
+			hideButton.parent().parent().next(hiddenComm).show();
 		},
 
-		hideComment: function() {
-			var hideButton = $('#hide');
-			var hiddenComm = $('#hiddenComment');
-			hideButton.parent().parent().parent().hide();
-			hideButton.parent().parent().parent().next(hiddenComm).show();
-		},
-
-		undoHiddenComment: function() {
-			console.log('giorgia');
-			var undoButton = $('#undo');
+		undoHiddenComment: function(evt) {
+			var undoButton = $(evt.target);
 			var thisCommentSection = undoButton.parent();
 			thisCommentSection.hide();
 			thisCommentSection.prev('#comment').show();
+		},
+
+		deleteComment: function(evt) {
+			var deleteComm = $(evt.target);
+			deleteComm.parent().parent().parent().remove();
+		},
+
+		edit: function() {
+
 		},
 
 		render: function(){

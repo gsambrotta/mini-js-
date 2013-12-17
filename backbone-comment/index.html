@@ -22,7 +22,12 @@
 		{{#if loggedin}}
 			<section class="addComment">
 				<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
-				<input text="type" id="name" placeholder="Name">
+				<ul class="user-contact">
+					<li><b>{{#if isMine}} {{name}} {{/if}}</b></li>
+					<li>{{nickname}}</li>
+					<li>{{time}}</li>
+				</ul>
+				<input text="type" id="name" placeholder="Name">				
 				<input text="type" id="nickname" placeholder="@nickname">
 				<textarea class="message"></textarea>
 				<div class="footer-post">
@@ -56,17 +61,35 @@
 		</div>
 		</script>
 
+
+
 		<div class="wrap list" id="wrap-list"></div>
 		<script type="text/x-handlebars-template" id="commentList">
 		<div id="commentList">
+
 		{{#each comments}}
 		<section id="comment" class="comment">
 			<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
 			<div class="body">
-			<div class="icons">
-				<div class="hide" id="hide"><i class="fa fa-eye"></i>
-				</div>					
-				{{!-- <div class="delete" id="delete">X</div>--}}					
+
+			<div class="icons">			
+				{{#if isMine }} 
+					<div class="delete"></div>
+					<div class="box-icon black">
+						<i class="fa fa-times-circle"></i> 
+					</div>
+					<div class="edit"></div>
+					<div class="box-icon black">
+						<i class="fa fa-pencil"></i>
+					</div>
+
+				{{else}}
+					<div class="hide"></div>
+					<div class="box-icon pink">
+						<i class="fa fa-eye"></i>
+					</div>	
+				{{/if}}	
+
 			</div>
 				<ul class="user-contact">
 					<li><b>{{name}}</b></li>
@@ -76,12 +99,13 @@
 				<p>{{body}}</p>
 			</div>
 		</section>
-		<section id="hiddenComment" style="display: none">
+		<section class="hiddenComment" style="display: none">
 			<p class="hide-message"><b>You just hide the comment from this user</b></p>
 			<button id="undo">Undo</button>
 			<button>Send Feedback</button>
 		</section>
 		{{/each}}
+
 		</div>
 		</script>	
 		
