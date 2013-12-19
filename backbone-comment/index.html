@@ -33,7 +33,7 @@
 					<li id="nickname">@designbygio</li>
 					<li>{{time}}</li>
 				</ul>
-				<textarea class="message"></textarea>
+				<textarea class="message focus"></textarea>
 				<div class="footer-post">
 					<button id="send">SEND</button>
 					<button id="cancel">CANCEL</button>
@@ -83,13 +83,12 @@
 
 			<div class="body">
 				<div class="icons">	
-
 					{{#if isMine }} 
 						<div class="delete" data-cid="{{id}}"></div>
 						<div class="box-icon black">
 							<i class="fa fa-times-circle"></i> 
 						</div>
-						<div class="edit"></div>
+						<div class="edit" data-cid="{{id}}"></div>
 						<div class="box-icon black">
 							<i class="fa fa-pencil"></i>
 						</div>
@@ -100,7 +99,6 @@
 							<i class="fa fa-eye"></i>
 						</div>	
 					{{/if}}	
-
 				</div>
 
 			{{#if edit}}
@@ -109,7 +107,7 @@
 					<li>{{nickname}}</li>
 					<li>{{time}}</li>
 				</ul>
-				<textarea class="message editTextarea"></textarea>
+				<textarea class="message editTextarea" data-cid="{{id}}" value={{body}}>{{body}}</textarea>
 			{{else}}
 				<ul class="user-contact">
 					<li><b>{{name}}</b></li>

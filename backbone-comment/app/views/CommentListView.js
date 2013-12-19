@@ -5,7 +5,9 @@
 			'click .hide': 'hideComment',
 			'click #undo': 'undoHiddenComment',
 			'click .delete': 'deleteComment',
-			'click .edit': 'editComment'
+			'click .edit': 'editComment',
+			'keypress textarea': 'saveOnEnter',
+			'blur textarea': 'saveEdit'
 		},
 
 		initialize: function() {
@@ -39,10 +41,24 @@
 		},
 
 		editComment: function(evt) {
-			var editComm = $(evt.target);
-			this.edit = true;
+			editCommTextarea = $(evt.target);
+			editCommTextarea.focus();
+			//var editCommVal = editCommTextarea.val();
+			var cid = editCommTextarea.data('cid');
+			var model = this.collection.get(cid);
+			model.set({edit: true});
+			//var textarea = editCommTextarea.parent().parent().find('textarea');
 		},
 
+		saveEdit: function(evt) {
+			var textarea = $(evt.target).val();
+			this.model.save({body: textarea});
+			this.edit = false; 
+		},
+
+		saveOnEnter: function(evt) {
+			if (evt.keyCode == 13) this.saveEdit();
+		},
 
 		render: function(){
 			var that = this,

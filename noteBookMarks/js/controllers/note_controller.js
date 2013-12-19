@@ -6,6 +6,7 @@ Notes.NoteController = Ember.ObjectController.extend({
 
 		modified: function(){
 			this.set('isEditing', false);
+			console.log(this.get('model'));
 			this.get('model').save();
 		},
 
