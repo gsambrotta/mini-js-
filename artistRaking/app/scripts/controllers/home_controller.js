@@ -21,7 +21,6 @@ ArtRank.HomeController = Ember.ObjectController.extend({
     },
 
     photos: function() {
-        //console.log(this.get('model').content);
         return this.get('model').content;
     }.property(),
 

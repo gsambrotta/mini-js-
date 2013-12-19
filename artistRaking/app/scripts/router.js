@@ -22,7 +22,7 @@ ArtRank.HomeRoute = Ember.Route.extend({
 
 ArtRank.ArtistsRoute = Ember.Route.extend({
 	model: function() {
-		return this.store.find('artists');
+		return this.store.find('artists');		
 	}
 });
 

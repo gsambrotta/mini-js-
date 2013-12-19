@@ -5,18 +5,18 @@ ArtRank.Photo = DS.Model.extend({
 
 ArtRank.Photo.FIXTURES = [
 	 {
-	   id: 1,
-	   imageTitle: 'Learn Ember.js',
-	   imageUrl: 'http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-01.jpg'
-	 },
-	 {
 	   id: 2,
-	   imageTitle: '...',
+	   imageTitle: 'Learn Ember.js',
 	   imageUrl: 'http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-02.jpg'
 	 },
 	 {
 	   id: 3,
-	   imageTitle: 'Profit!',
+	   imageTitle: '...',
 	   imageUrl: 'http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-03.jpg'
+	 },
+	 {
+	   id: 4,
+	   imageTitle: 'Profit!',
+	   imageUrl: 'http://getbootstrap.com/2.3.2/assets/img/bootstrap-mdo-sfmoma-02.jpg'
 	 }
 ];

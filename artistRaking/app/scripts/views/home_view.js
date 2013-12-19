@@ -6,7 +6,7 @@ ArtRank.HomeView = Ember.View.extend({
 		element.addClass('animate-' + direction);
 		setTimeout(function() {
 			element.removeClass('animate-' + direction);
-		}.bind(this), 300);
+		}.bind(this), 500);
 	},
 
     startTimer: function() {
@@ -15,7 +15,7 @@ ArtRank.HomeView = Ember.View.extend({
             Ember.run(function() {
             	self.nextPhoto();
             });
-        }, 3000);
+        }, 5000);
     }.on('init'),
 
 	prevPhoto: function() {

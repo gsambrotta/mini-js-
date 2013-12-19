@@ -5,7 +5,14 @@ ArtRank.CategoriesController = Ember.ObjectController.extend({
 		},
 		voteDown: function() {
 			console.log('vote down')
+		},
+		addParentCat: function() {
+			this.set('isEditing', true);
+		},
+		saved: function() {
+			this.set('isEditing', false);
 		}
+
 	},
 	arrangedContent: function() {
 		 return this.get('model').content;

@@ -15,6 +15,14 @@ ul, li { list-style: none; }
 	clear: both;
 }
 
+.btn-primary {
+	background: #16A085!important;
+}
+
+a {
+	color: #16A085!important;
+}
+
 .navbar{
 	.logo {
 		background: $logo;
@@ -80,12 +88,12 @@ ul, li { list-style: none; }
 
 							&.animate-left {
 								-webkit-animation: slide-left;
-								-webkit-animation-duration: 300ms;
+								-webkit-animation-duration: 500ms;
 								-webkit-animation-iteration-count: 1;
 							}
 							&.animate-right {
 								-webkit-animation: slide-right;
-								-webkit-animation-duration: 300ms;
+								-webkit-animation-duration: 500ms;
 								-webkit-animation-iteration-count: 1;
 							}  
 						}
@@ -134,39 +142,177 @@ ul, li { list-style: none; }
 }
 
 .imageTitleGallery {
-	position: relative;
-	top: 120px;
-	float: right;
+	position: absolute;
+	top: 250px;
+	right: 0;
 	width: 200px;
 	margin-right: 45px;
 	color: white;
 }
 
 /* Category */
-.categories h2{
-	display: inline;
-	margin: 0;
-	float: left;
-	padding: 0;
-	width: 80%;
+.parentCat {
+	background: #eee;
+	padding:12px 7px 2px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	li {
+		display: inline;
+		list-style: disc;
+
+		h5 {
+			float: left;
+			margin: 2px 20px 0 0;
+		}
+	}
+}
+
+.addParentCat {
+	width: 30%;
+	input {
+		height: 24px;
+		font-size: 12px;
+	}
+	span {
+		padding: 2px 11px;
+	}
+}
+
+h1.catTitle {
+	text-align: center;
+	margin-bottom: 37px;
+	text-transform: uppercase;
+	text-shadow: -1px 1px #fefefe;
+}
+.wrap {
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	padding: 20px 0px;
+	box-shadow: 2px -2px 3px #efefef;
+	border-radius: 6px;
+	aside {
+		background: #eee;
+		border-radius: 6px;
+		box-shadow: 0px 2px 3px #ccc;
+		padding: 7px 15px;
+		ul {
+			display: inline;
+			li {
+				margin: 17px 0px 17px 20px;
+				list-style: disc;
+				&:first-child {
+					margin-left: 0px;
+					border-bottom: 1px solid #ccc;
+					list-style: none;
+				}
+				&:last-child {
+					list-style: none;
+
+					input.addSubCat {
+						list-style: none;
+						margin-left: -15px;
+						height: 24px;
+						padding-top: 5px;
+						padding-right: 0px;
+						font-size: 0.8em;
+						width: 105%;
+
+					}
+					span {
+						left: -15px;
+						position: relative;
+						padding: 3px 12px;
+					}
+				}
+				a {
+					color: #444!important;
+				}
+			}	
+		}
+	}
+	.artist-box {
+		margin-top: 20px;
+		background: #eee;
+		padding: 15px;
+		border-radius: 6px;
+		box-shadow: 0px 2px 3px #ccc;
+		img {
+			float: left;
+		}
+		h4 {
+			margin: 0px 0px 10px 95px;
+			a {
+				color: #444!important;
+			}
+
+		}
+		.thumbs {
+			float: right;
+			position: relative;
+			top: -55px;
+		} 
+		hr {
+			color: #eee;
+			margin: 0px;
+			position: relative;
+			top: 40px;
+			width: 100%;
+			box-shadow: 0px 1px 2px #fff;
+		}
+	}
 }
 
 .thumbs {
 	margin-bottom: -30px;
+	.thumb-wrap {
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		padding: 7px 0px 7px 18px;
+		height: 36px;
+		background: #fff;
+		float: left;
+		p {
+			float: left;
+			margin: 3px 0 0px 2px;
+		}
+		.thumb-up {
+			background: url('../images/thumbs.png') 0 0 no-repeat;
+			width: 39px;
+			height: 39px;
+			position: relative;
+			top: -10px;
+			display: inline-block;
+			&:hover {
+				background: url('../images/thumbs.png') -1px -47px no-repeat;
+			}
+		}
+
+		&.down {
+			padding: 7px 24px 7px 0px;
+			margin-left: 10px;
+		p {
+			float: clear;
+		}
+		.thumb-down {
+			background: url('../images/thumbs.png') -39px -1px no-repeat;
+			width: 39px;
+			height: 39px;
+			display: inline-block;
+			position: relative;
+			top: -14px;
+			float: left;
+
+			&:hover {
+				background: url('../images/thumbs.png') -39px -49px no-repeat;
+			}
+		}	
+	}
 }
 
-.thumb-up {
-	background: url('../images/thumbs.png') 0 0 no-repeat;
-	width: 45px;
-	height: 45px;
-	float: left;
 }
 
-.thumb-down {
-	background: url('../images/thumbs.png') 0 -42px no-repeat;
-	width: 45px;
-	height: 45px;
-	display: inline-block;
+.fa-pencil {
+	margin-right: 7px;
 }
 
 /* Artists Page */
@@ -175,4 +321,13 @@ ul, li { list-style: none; }
 	margin: 0px 40px 0 0;
 	display: inline-block;
 	height: 250px;
+}
+
+.addCatProfile {
+	margin-left: -16px;
+	margin-bottom: 40px;
+}
+
+.info input {
+	width: 50%;
 }

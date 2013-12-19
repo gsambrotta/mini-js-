@@ -1,11 +1,92 @@
-{{#each item in arrangedContent}}
-	<section class="categories">
-		<h2>{{item.catTitle}}</h2>
-		<div class="thumbs">
-			<div class="thumb-up" {{action "voteUp" }} ></div>
-			<div class="thumb-down" {{action "voteDown" }} ></div>
+<nav class="col-md-12 parentCat">
+	<ul class="left">
+		<li><h5>Parent Category:</h5></li>
+		<li>{{#linkTo "home"}} disco ·{{/linkTo}}</li>
+		<li>{{#linkTo "home"}} swing ·{{/linkTo}}</li>
+		<li>{{#linkTo "home"}} '80 ·{{/linkTo}}</li>
+		<li>{{#linkTo "home"}} jazz {{/linkTo}}</li>
+	</ul>
+	{{#if isEditing}}
+	<div class="input-group margin-bottom-sm right addParentCat">
+	  {{input class="form-control" type="text" placeholder="Add your own parent category" focus-out="saved"}}
+	  <span class="input-group-addon">
+	  	<i class="fa fa-plus-circle"></i>
+	  </span>
+	</div>
+	{{else}}
+	<span class="right" {{action 'addParentCat' on='doubleClick'}}>
+		<i class="fa fa-plus-circle"></i>
+	</span>
+	{{/if}}
+</nav>
+
+<h1 class="col-md-12 catTitle"> POP </h1>
+<div class="wrap col-md-12">
+	<aside class="col-md-3">
+		<ul>
+			<li><h4>Subcategories</h4></li>
+			<li>{{#linkTo "home"}}swing{{/linkTo}}</li>
+			<li>{{#linkTo "home"}}blues{{/linkTo}}</li>
+			<li>{{#linkTo "home"}}twist{{/linkTo}}</li>
+			<li>
+				<div class="input-group margin-bottom-sm">
+				  {{input class="form-control addSubCat" type="text" placeholder="Add your own subcategory"}}
+				  <span class="input-group-addon">
+				  	<i class="fa fa-plus-circle"></i>
+				  </span>
+				</div>
+			</li>
+		</ul>
+	</aside>
+	<div class="col-md-1"></div>
+	<section class="col-md-8">
+		<div class="artist-box">
+			{{#linkTo "artists"}}<img src="http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg" alt="profile" width="50" />{{/linkTo}}
+			<h4>{{#linkTo "artists"}}Madonna Louise Veronica Ciccone{{/linkTo}}</h4>
+			<h4>{{#linkTo "artists"}}Madonna{{/linkTo}}<h4>
+			<div class="thumbs">
+				<div class="thumb-wrap up">
+					<p>120</p>
+					<div class="thumb-up" {{action "voteUp" }} ></div>
+				</div>
+				<div class="thumb-wrap down">
+					<div class="thumb-down" {{action "voteDown" }} ></div>
+					<p>12</p>
+				</div>
+			</div>
 		</div>
-		<div class="clear"></div>
-		<hr>
+		<div class="artist-box">
+			{{#linkTo "artists"}}<img src="http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg" alt="profile" width="50" />{{/linkTo}}
+			<h4>{{#linkTo "artists"}}Madonna Louise Veronica Ciccone{{/linkTo}}</h4>
+			<h4>{{#linkTo "artists"}}Madonna{{/linkTo}}<h4>
+			<div class="thumbs">
+				<div class="thumb-wrap">
+					<p>8</p>
+					<div class="thumb-up" {{action "voteUp" }} ></div>
+				</div>
+				<div class="thumb-wrap down">
+					<div class="thumb-down" {{action "voteDown" }} ></div>
+					<p>100</p>
+				</div>
+			</div>
+		</div>
+		<div class="artist-box">
+			{{#linkTo "artists"}}<img src="http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg" alt="profile" width="50" />{{/linkTo}}
+			<h4>{{#linkTo "artists"}}Madonna Louise Veronica Ciccone{{/linkTo}}</h4>
+			<h4>{{#linkTo "artists"}}Madonna{{/linkTo}}<h4>
+			<div class="thumbs">
+				<div class="thumb-wrap">
+					<p>80</p>
+					<div class="thumb-up" {{action "voteUp" }} ></div>
+				</div>
+				<div class="thumb-wrap down">
+					<div class="thumb-down" {{action "voteDown" }} ></div>
+					<p>2</p>
+				</div>
+			</div>
+		</div>
 	</section>
-{{/each}} 
+
+	<hr>
+	<div class="clear"></div>
+</div>

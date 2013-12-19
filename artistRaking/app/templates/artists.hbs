@@ -1,16 +1,40 @@
 {{#each item in arrangedContent}}
+<button type="button" class="btn btn-primary right" {{action "editProfile" on="click"}} >
+	<i class="fa fa-pencil fa-fw"></i>Edit
+</button>
 <section class="col-md-12">
 	<img src="http://4.bp.blogspot.com/-zsbDeAUd8aY/US7F0ta5d9I/AAAAAAAAEKY/UL2AAhHj6J8/s1600/facebook-default-no-profile-pic.jpg" alt="profile" width="250" class="profile-img"/>
-	<div class="info">
-		<h2>{{item.name}}</h2>
-		<h2>{{item.nickname}}</h2>
-		<h3>{{item.field}}</h3>
-		<h3>{{item.city}}</h3>
-	</div>
+	{{#if isEditing}}
+		<div class="info">
+			<h2>
+				{{edit-input value=item.name focus-out="modified" insert-newline="modified" class="form-control"}}
+			</h2>
+			<h2>
+				{{edit-input value=item.nickname focus-out="modified" insert-newline="modified" class="form-control"}}
+			</h2>
+			<h3>
+				{{edit-input value=item.field focus-out="modified" insert-newline="modified" class="form-control"}}
+			</h3>
+			<h3>
+				{{edit-input value=item.city focus-out="modified" insert-newline="modified" class="form-control"}}
+			</h3>
+		</div>
+	{{else}}
+		<div class="info">
+			<h2>{{item.name}}</h2>
+			<h2>{{item.nickname}}</h2>
+			<h3>{{item.field}}</h3>
+			<h3>{{item.city}}</h3>
+		</div>
+	{{/if}}
 </section>
 <section class="col-md-12">
 	<h3>Bio</h3>
-	<p>{{item.bio}}</p>
+	{{#if isEditing}}
+		<p>{{edit-input value=item.bio focus-out="modified" insert-newline="modified" class="form-control"}}</p>
+	{{else}}
+		<p>{{item.bio}}</p>
+	{{/if}}
 </section>
 <section class="col-md-12">
 	<h3>Portfolio</h3>
@@ -18,8 +42,10 @@
 </section>
 <section class="col-md-12">
 	<h3>Give your vote!</h3>
-	<div class="form-group col-md-4">
-		<input type="text" class="vote form-control" placeholder="Write here a category" />
+	<p>{{content.newCategory}}</p>
+	<div class="input-group margin-bottom-sm col-md-4 addCatProfile">
+	  {{input class="form-control addSubCat" type="text" placeholder="Add your own subcategory"}}
+	  <span class="input-group-addon"><i class="fa fa-plus-circle"></i></span>
 	</div>
 </section>
 {{/each}}
