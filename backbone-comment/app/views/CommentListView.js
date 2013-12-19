@@ -9,6 +9,7 @@
 		},
 
 		initialize: function() {
+			this.edit = false;
 			var self = this;
 			this.collection.bind('change', function(){ 
 				self.render();
@@ -18,8 +19,8 @@
 		hideComment: function(evt) {
 			var hideButton = $(evt.target);
 			var hiddenComm = $('.hiddenComment');
-			hideButton.parent().parent().hide();
-			hideButton.parent().parent().next(hiddenComm).show();
+			hideButton.parent().parent().parent().hide();
+			hideButton.parent().parent().parent().next(hiddenComm).show();
 		},
 
 		undoHiddenComment: function(evt) {
@@ -31,12 +32,17 @@
 
 		deleteComment: function(evt) {
 			var deleteComm = $(evt.target);
+			var cid = deleteComm.data("cid");
+			var model = this.collection.get(cid);
+			model.destroy();
 			deleteComm.parent().parent().parent().remove();
 		},
 
-		edit: function() {
-
+		editComment: function(evt) {
+			var editComm = $(evt.target);
+			this.edit = true;
 		},
+
 
 		render: function(){
 			var that = this,
@@ -49,5 +55,6 @@
 					comments: comments
 				})
 			); // take my model and render in my html template
+
 		}
 	});

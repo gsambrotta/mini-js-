@@ -17,18 +17,22 @@
 	</script>
 
 		<div class="wrap new-wrap" id="wrap-login"></div>
+		<div class="wrap list" id="wrap-list"></div>
+
+
+
+
 		<script type="text/x-handlebars-template" id="newComment">
 		<div id="new-comment">
+
 		{{#if loggedin}}
 			<section class="addComment">
-				<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
+				<img src="http://upload.wikimedia.org/wikipedia/commons/d/d0/Rooster_Profile.jpg" width="35" id="imgProfile"/>
 				<ul class="user-contact">
-					<li><b>{{#if isMine}} {{name}} {{/if}}</b></li>
-					<li>{{nickname}}</li>
+					<li><b id="name">designbygio</b></li>
+					<li id="nickname">@designbygio</li>
 					<li>{{time}}</li>
 				</ul>
-				<input text="type" id="name" placeholder="Name">				
-				<input text="type" id="nickname" placeholder="@nickname">
 				<textarea class="message"></textarea>
 				<div class="footer-post">
 					<button id="send">SEND</button>
@@ -36,7 +40,9 @@
 					<div class="clear"></div>
 				</div>
 			</section>
+
 		{{ else }}
+
 			<section id="join-section">
 				<img src="app/img/newavatar.png" width="35" />
 				<textarea disabled class="join-text" placeholder="Join the discussion..." ></textarea>
@@ -58,45 +64,61 @@
 				</div>
 			</section>
 		{{/if}}
+
 		</div>
 		</script>
 
 
-
-		<div class="wrap list" id="wrap-list"></div>
 		<script type="text/x-handlebars-template" id="commentList">
 		<div id="commentList">
 
 		{{#each comments}}
 		<section id="comment" class="comment">
-			<img src="http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg" width="35" />
+
+			{{#if isMine}}
+				<img width="35" src={{img}} />
+			{{else}}
+				<img src='http://efamilymatch.com/wp-content/uploads/avatars/profile222.jpg' width="35" />
+			{{/if}}
+
 			<div class="body">
+				<div class="icons">	
 
-			<div class="icons">			
-				{{#if isMine }} 
-					<div class="delete"></div>
-					<div class="box-icon black">
-						<i class="fa fa-times-circle"></i> 
-					</div>
-					<div class="edit"></div>
-					<div class="box-icon black">
-						<i class="fa fa-pencil"></i>
-					</div>
+					{{#if isMine }} 
+						<div class="delete" data-cid="{{id}}"></div>
+						<div class="box-icon black">
+							<i class="fa fa-times-circle"></i> 
+						</div>
+						<div class="edit"></div>
+						<div class="box-icon black">
+							<i class="fa fa-pencil"></i>
+						</div>
 
-				{{else}}
-					<div class="hide"></div>
-					<div class="box-icon pink">
-						<i class="fa fa-eye"></i>
-					</div>	
-				{{/if}}	
+					{{else}}
+						<div class="hide"></div>
+						<div class="box-icon pink">
+							<i class="fa fa-eye"></i>
+						</div>	
+					{{/if}}	
 
-			</div>
+				</div>
+
+			{{#if edit}}
+				<ul class="user-contact">
+					<li><b>{{name}}</b></li>
+					<li>{{nickname}}</li>
+					<li>{{time}}</li>
+				</ul>
+				<textarea class="message editTextarea"></textarea>
+			{{else}}
 				<ul class="user-contact">
 					<li><b>{{name}}</b></li>
 					<li>{{nickname}}</li>
 					<li>{{time}}</li>
 				</ul>
 				<p>{{body}}</p>
+			{{/if}}
+
 			</div>
 		</section>
 		<section class="hiddenComment" style="display: none">

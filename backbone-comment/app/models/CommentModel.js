@@ -1,5 +1,7 @@
 var CommentModel = Backbone.Model.extend({
 
+    edit: false,
+
 	isMine: function(){
 		return this.get("name") === "designbygio";
 	},

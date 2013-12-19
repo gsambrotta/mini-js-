@@ -123,6 +123,10 @@ section img {
     padding: 5px 0;
 }
 
+.addComment .user-contact {
+	padding-top: 7px;
+}
+
 .user-contact li {
     display: inline;
 }
@@ -148,11 +152,7 @@ section img {
 	margin-top: -20px;
 }
 
-.fa.fa-pencil {
-	margin-top: 0px;
-}
-
-.hide, .delete {
+.hide, .delete, .edit {
 	float: right;
 	position: relative;
 	right: 4px;

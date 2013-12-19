@@ -15,3 +15,4 @@ var commentListView = new CommentListView({
 listCommentCollection.fetch().then(function() {
 	commentListView.render();
 });
+

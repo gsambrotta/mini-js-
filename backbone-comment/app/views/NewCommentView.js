@@ -4,12 +4,13 @@ var NewCommentView = Backbone.View.extend({
 	events: {
 		'click #join': 'showLogin',
 		'click #login': 'loggedIn',
+		'keypress input': 'loggedinOnEnter',
 		'click #cancel': 'cancel',
 		'click #send': 'submit'
 	},
 
 	initialize: function(){
-		this.loggedin = false;
+		this.loggedin = true;
 		this.render();
     },
 
@@ -20,7 +21,7 @@ var NewCommentView = Backbone.View.extend({
     	login.show();
     },
 
-    loggedIn: function(event) {
+    loggedIn: function(evn) {
     	var id = $('#ID');
     	var psw = $('#psw');
 		if (id.val()=="designbygio") { 
@@ -35,12 +36,19 @@ var NewCommentView = Backbone.View.extend({
 		}
     },
 
+    loggedinOnEnter: function(evt) {
+    	if( evt.keyCode === 13){
+    		this.loggedIn();
+    	}
+    },
+
     submit: function(evt){
-		console.log('ciao');
-		var name = $('#name').val();
-		var nickname = $('#nickname').val();
+    	var imgProfile = $('#imgProfile').attr('src');
+		var name = $('#name').text();
+		var nickname = $('#nickname').text();
 		var message = $('textarea').val();
 		var commentModel = new CommentModel({
+			img: imgProfile,
 			name: name,
 			nickname: nickname, 
 			body: message
