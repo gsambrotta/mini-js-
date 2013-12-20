@@ -2,28 +2,25 @@ var CartView = Backbone.View.extend({
 
   total: 0.0,
 
-  events: {
-      
+  initialize: function(options){ 
+    this.collection = options.collection;
+    this.collection.on('add', this.changed, this);
+    this.collection.on('remove', this.changed, this);
+
   },
 
-  initialize: function() {
-      this.render();
-      this.on("itemAdded", this.increasePrice);
-      this.on("itemRemoved", this.decreasePrice);
+  changed: function() {
+    var total = 0;
+    this.collection.each(function(clone_fruit_model){
+      total += clone_fruit_model.get('price');
+    });
+    this.total = total;
+    this.render();
   },
 
-  increasePrice: function(pricenumber){
-      this.total += parseFloat(pricenumber);
-      this.render();
-  },
-
-  decreasePrice: function(price){
-      this.total -= parseFloat(price);
-      this.render();
-  },
 
   render: function() {
-      $("#price").html(this.total);
+    this.$el.html(this.total);
   }
 
 });

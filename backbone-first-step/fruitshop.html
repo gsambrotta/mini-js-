@@ -5,12 +5,8 @@
 		<title>backbone app</title>
 		<script src="lib/jquery-2.0.3.min.js"></script>
 		<script src="lib/underscore-min.js"></script>
-		<script src="lib/backbone-min.js"></script>
+		<script src="lib/backbone.js"></script>
 
-		<script src="FruitModel.js"></script>    <!-- better keep this order -->
-		<script src="FruitCollection.js"></script>
-		<script src="CartView.js"></script>
-		<script src="ListView.js"></script>
 	</head>
 
 	<body>
@@ -22,22 +18,12 @@
 		<p>Total: <span id="price">0.00</span> €</p>
 	</div>
 
-	<script>
-		var fruits = [
-			{ name: 'Apple', weight: 1, price: 5.0 },
-			{ name: 'Orange', weight: 1, price: 8.0 },
-			{ name: 'Banana', weight: 1, price: 1.0 },
-			{ name: 'Apricot', weight: 1, price: 4.0 },
-			{ name: 'Mango', weight: 1, price: 3.0 },
-			{ name: 'Pear', weight: 1, price: 6.0 }
-		];
 
-		var fruitCollection = new FruitCollection();
-		fruitCollection.reset(fruits); // When you ut fruits in a collection--> became models
-		var listView = new ListView(); //Instance of a class ListView
-		listView.collection = fruitCollection;
-		listView.render();
-		var cartView = new CartView();
-	</script>
+		<script src="FruitModel.js"></script>    <!-- better keep this order -->
+		<script src="CartCollection.js"></script>
+		<script src="InventoryCollection.js"></script>
+		<script src="CartView.js"></script>
+		<script src="ListView.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>
