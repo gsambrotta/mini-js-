@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+</head>
+<style>
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+</style>
+<body>
+
+	<div class="chart">
+	</div>
+
+
+</body>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<script>
+var data = [ 15,  1, 8, 2];
+
+
+var chart = d3.select(".chart");
+var bar = chart.selectAll("div");
+var barDinamic = bar.data(data);
+var barEnter = barDinamic.enter().append("div");
+barEnter.style("width", function(d) {return d * 10 + "px"; });
+barEnter.text(function(d) { return d; });
+
+</script>
+
+</html>

@@ -21,8 +21,9 @@
 		hideComment: function(evt) {
 			var hideButton = $(evt.target);
 			var hiddenComm = $('.hiddenComment');
-			hideButton.parent().parent().parent().hide();
-			hideButton.parent().parent().parent().next(hiddenComm).show();
+			var section = hideButton.closest('section');
+			section.hide();
+			section.next(hiddenComm).show();
 		},
 
 		undoHiddenComment: function(evt) {
@@ -62,7 +63,7 @@
 
 		render: function(){
 			var that = this,
-			    comments = this.collection.toJSON(); //copy of a array model
+			    comments = this.collection.toJSON(); //copy of an array model
 
 			comments.reverse(); // revers just the copy so the real array stay the same
 

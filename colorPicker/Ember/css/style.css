@@ -49,6 +49,9 @@ span b {
 }
 
 p {
-	margin-top: 28px;
+	margin-top: 25px;
+}
+
+select {
 	float: left;
 }
