@@ -1,0 +1,32 @@
+{
+  "name": "dog-owner-app",
+  "version": "1.0.0",
+  "description": "App to find partener based on your dog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "github.com/gsambrotta",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "bootstrap": "^3.3.6",
+    "connect": "^3.4.1",
+    "http": "0.0.0",
+    "jasmine-node": "^1.14.5",
+    "jquery": "^2.2.0",
+    "mongoose": "^4.4.4",
+    "mustache": "^2.2.1",
+    "restify": "^4.0.4",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

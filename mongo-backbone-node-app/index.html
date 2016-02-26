@@ -1,0 +1,48 @@
+<!doctype>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>dog owner app</title>
+		<link rel="shortcut icon" type="image/png" href="lib/jasmine-2.2.0/jasmine_favicon.png">
+	  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	  <link rel="stylesheet" href="css/signup.css">
+	  <link rel="stylesheet" href="lib/jasmine-2.2.0/jasmine.css">
+
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="node_modules/underscore/underscore-min.js"></script>
+		<script src="node_modules/backbone/backbone.js"></script>
+		<script src="node_modules/mustache/mustache.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+
+	    <form id="form" class="form-signin">
+	      <h2 class="form-signin-heading">Please sign in</h2>
+	      <label for="inputName" class="sr-only">Name</label>
+	      <input type="text" id="name" class="form-control" placeholder="Name" required autofocus>
+	      <label for="inputSurname" class="sr-only">Surname</label>
+	      <input type="text" id="surname" class="form-control" placeholder="Surname" required autofocus>
+	      <label for="inputNickname" class="sr-only">Nickname</label>
+	      <input type="text" id="nickname" class="form-control" placeholder="Nickname" required autofocus>
+	      <label for="inputEmail" class="sr-only">Email address</label>
+	      <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+	      <label for="inputPassword" class="sr-only">Password</label>
+	      <input type="password" id="password" class="form-control" placeholder="Password" required>
+	      <div class="checkbox">
+	        <label>
+	          <input type="checkbox" value="remember-me"> Remember me
+	        </label>
+	      </div>
+	      <button id="btn-submit" class="btn btn-lg btn-primary btn-block" type="submit"> Sign in </button>
+	      <button id="btn-next" type="button" class="btn btn-warning pull-right"> Go to the next step </button>
+	    </form>
+
+	    <div id="secondView"></div>
+
+	  </div> <!-- /container -->
+
+		<script src="src/app-built.js"></script>
+	</body>
+</html>
