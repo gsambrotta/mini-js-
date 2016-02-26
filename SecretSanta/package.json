@@ -1,0 +1,31 @@
+{
+  "name": "santagame",
+  "version": "1.0.0",
+  "description": "client and server code for the secret santa game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shecodes-students/SecretSanta.git"
+  },
+  "keywords": [
+    "xmas",
+    "santa",
+    "christmas",
+    "gift",
+    "giving",
+    "secret",
+    "santa"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shecodes-students/SecretSanta/issues"
+  },
+  "homepage": "https://github.com/shecodes-students/SecretSanta",
+  "dependencies": {
+    "debug": "2.1.1"
+  }
+}
