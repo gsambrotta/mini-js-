@@ -1,0 +1,156 @@
+
+// Availiability Step
+// -----------------------------
+
+.availiability {
+  padding-top: 140px;
+  padding-bottom: 130px;
+
+  .booking-box-wrap {
+  	background: $blue-light;
+  	width: 100%;
+    margin-top: 57px;
+    padding: 20px;
+
+    .booking-box__label {
+    	font-size: 1.6rem;
+	    height: 31px;
+	    vertical-align: middle;
+	    display: table-cell;
+    }
+
+    .arrow-select {
+    	@include breakpoint-bootst(wide-screen-bs){
+    		display: block;
+			}
+    	right: 9px
+    }
+
+	  .booking-box__price {
+	  	margin-top: 25px;
+	  	position: relative;
+
+	  	.price-fields {
+	  		@include breakpoint-bootst(small-screen-bs){ //Overrride bootstrap style
+					width: 83%;
+    			padding-right: 0;
+				}
+				@include breakpoint-bootst(wide-screen-bs){ //Overrride bootstrap style
+	  			width: 50%;
+		    	padding-left: 15px;
+		    	padding-right: 7px;
+		  	}
+
+		  	input{
+		  		width: 55%;
+
+		  		&:last-child {
+		  			width: 45%;
+		  		}
+		  	}
+	  	}
+
+	  	.invalid-msg {
+	  		position: absolute;
+		    top: 34px;
+		    left: 70px;
+	  	}
+
+	  	.price-cat-fiels {
+	  		@include breakpoint-bootst(small-screen-bs){ //Overrride bootstrap style
+	  			width: 99.5%;
+		    	padding-left: 23%;
+		    	padding-top: 2px;
+		  	}
+		  	@include breakpoint-bootst(wide-screen-bs){
+					width: 33.33333333%;
+    			padding-left: 0;
+		    	padding-top: 0;
+				}
+	  	}
+	  }
+
+	  .booking-box__timing {
+	  	margin-top: 25px;
+
+	  	.date-fields {
+	  		padding-left: 15px;
+	  		padding-bottom: 4px;
+	  	}
+	  }
+
+	  .booking-box__repeat {
+	  	margin-top: 25px;
+	  	margin-bottom: -10px;
+
+	  	.days-form {
+	  		margin-left: 30px;
+	  		padding-top: 38px;
+
+	  		.checkbox-wrap {
+	  			@include breakpoint-bootst(small-screen-bs){ //Overrride bootstrap style
+	  				margin-right: 19px;
+    				line-height: 24px;
+    			}
+    			@include breakpoint-bootst(wide-screen-bs){//Overrride bootstrap style
+		  			margin-right: 10px;
+			  	}
+	  		}
+
+		  	.form-group:last-child .checkbox-wrap {
+					margin-right: 0;
+				}
+
+				.form-group { //Overrride bootstrap style
+				  display: inline-block;
+				  margin-bottom: 0;
+				  vertical-align: middle;
+				}
+	  	}
+	  }
+  }
+
+  .booking-box__buttons {
+  	margin-top: 25px;
+
+  	.btn-link {
+  		font-size: 1.6rem;
+  	}
+
+  	.btn-cta {
+  		height: 30px;
+    	margin-top: 5px;
+  	}
+
+  }
+}
+
+
+.explanation-box-wrap {
+	background: $blue-light;
+	width: 100%;
+  margin-top: 57px;
+  padding: 20px;
+
+  ul {
+  	padding-top: 15px;
+
+	  li {
+	  	padding-bottom: 20px;
+
+		  span {
+		  	top: 4px;
+		    position: relative;
+		    margin-right: 16px;
+		    display: block;
+	    	float: left;
+	    	height: 30px;
+		  }
+
+		  &:last-child span{
+		    left: 4px;
+		    color: $beige;
+	    }
+	  }
+  }
+}

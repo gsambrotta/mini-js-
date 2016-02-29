@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 22"
+	 enable-background="new 0 0 22 22" xml:space="preserve">
+<title>calendar</title>
+<desc>Created with Sketch.</desc>
+<g id="Product-Detail-page" sketch:type="MSPage">
+	<g id="Desktop-HD-Click-on-datapicker-time" transform="translate(-1143.000000, -227.000000)" sketch:type="MSArtboardGroup">
+		<g id="Data-picker-time" transform="translate(1006.000000, 216.000000)" sketch:type="MSLayerGroup">
+			<g id="Group" sketch:type="MSShapeGroup">
+				<g id="clock">
+					<g id="calendar" transform="translate(137.000000, 11.000000)">
+						<path id="Fill-133" fill="#C5A981" d="M19.8,21.8H2.2c-1.2,0-2.2-1-2.2-2.2V3.4c0-1.2,0.8-2.2,1.8-2.2h1.1v1.5H1.8
+							C1.7,2.7,1.5,3,1.5,3.4v16.1c0,0.4,0.3,0.7,0.7,0.7h17.6c0.4,0,0.7-0.3,0.7-0.7V3.4c0-0.4-0.2-0.7-0.4-0.7h-1.1V1.2h1.1
+							c1,0,1.8,1,1.8,2.2v16.1C22,20.8,21,21.8,19.8,21.8"/>
+						<path id="Fill-134" fill="#C5A981" d="M5.1,4.4c-0.4,0-0.7-0.3-0.7-0.7V0.7C4.4,0.3,4.7,0,5.1,0s0.7,0.3,0.7,0.7v2.9
+							C5.9,4.1,5.5,4.4,5.1,4.4"/>
+						<path id="Fill-135" fill="#C5A981" d="M16.9,4.4c-0.4,0-0.7-0.3-0.7-0.7V0.7c0-0.4,0.3-0.7,0.7-0.7s0.7,0.3,0.7,0.7v2.9
+							C17.6,4.1,17.3,4.4,16.9,4.4"/>
+						<path id="Fill-136" fill="#C5A981" d="M7.3,1.5h7.3v1.5H7.3V1.5z"/>
+						<path id="Fill-137" fill="#C5A981" d="M1.5,5.9h19.1v1.5H1.5V5.9z"/>
+						<path id="Fill-37" fill="#C5A981" d="M11,16.3l-3.7-4.6L7.9,11l3.1,3.9l3.1-3.9l0.5,0.7L11,16.3"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

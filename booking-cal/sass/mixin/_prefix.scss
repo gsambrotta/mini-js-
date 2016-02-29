@@ -1,0 +1,41 @@
+
+// Prefix Mixins
+// ----------------
+// It helps you to avoid specify venodr every single time
+// You just define your property and the browsers prefix you need
+
+
+// Prefix on property
+// Example: @include prefix(transform, rotate(42deg), webkit ms);
+// Output: -webkit-transform: rotate(42deg); -ms-transform: rotate(42deg); transform: rotate(42deg);
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+  @if $vendors {
+    @each $vendor in $vendors {
+      #{"-" + $vendor + "-" + $property}: #{$value};
+    }
+  }
+  #{$property}: #{$value};
+}
+
+
+// Prefix on value
+// Example: @include prefix(transform, rotate(42deg), webkit ms);
+// Output: transform: -webkit-rotate(42deg); transform: -ms-rotate(42deg); transform: rotate(42deg);
+@mixin prefix-value($property, $value, $vendors: webkit moz ms o) {
+  @if $vendors {
+    @each $vendor in $vendors {
+      #{$property}: #{"-" + $vendor + "-" + $value};
+    }
+  }
+  #{$property}: #{$value};
+}
+
+
+// Placeholder Mixin
+// Example: @include placeholder{ color: $blue; font-size: 12px; }
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
