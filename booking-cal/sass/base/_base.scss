@@ -1,0 +1,38 @@
+
+// Base style
+// ----------------
+
+html {
+	height: 100%;
+}
+
+body {
+	color: $text-color;
+	height: 100%;
+}
+
+*:focus {
+    outline: 0;
+}
+
+.web {
+	display: none;
+	@include breakpoint-bootst(tablet-bs){
+		display: block;
+	}
+}
+
+.mobile {
+	display: block;
+	@include breakpoint-bootst(tablet-bs){
+		display: none;
+	}
+}
+
+.datepicker {
+	z-index: 9999 !important;
+}
+
+#placeholder {
+  height: 100px;
+}

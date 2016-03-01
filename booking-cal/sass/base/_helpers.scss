@@ -1,0 +1,28 @@
+
+// Style Helpers
+// ----------------
+
+// .hidden and .hide already exsist in bootstrap with !important
+.is-hidden {
+	display: none;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.inline {
+	display: inline;
+}
+
+.small-p {
+	font-size: fonts(p-size, small);
+}
+
+.bold {
+	font-weight: 700;
+}

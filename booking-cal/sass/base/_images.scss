@@ -1,0 +1,33 @@
+
+.cal-icon {
+	background: url('#{$icon-path}/calendar-icon.svg') no-repeat transparent 0 0;
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	background-size: 81%;
+}
+
+.cal-beige-icon {
+	background: url('#{$icon-path}/calendar-beige-icon.svg') no-repeat transparent 0 0;
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	background-size: 81%;
+}
+
+.schedule-circle-icon {
+	background-image: url('#{$icon-path}/schedule-circle-left-icon.svg'), url('#{$icon-path}/schedule-circle-right-icon.svg') ;
+	background-position: left center, right center;
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 22px;
+}
+
+.edit-icon {
+	background: url('#{$icon-path}/pencil-icon.svg') no-repeat transparent 0 0;
+	width: 19px;
+	height: 19px;
+}
+
+
+

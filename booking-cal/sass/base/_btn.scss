@@ -1,0 +1,66 @@
+
+// Button style
+// ---------------
+
+.btn {
+	padding: 11px 33px;
+	border-radius: 0px;
+	height: 37px;
+  line-height: 9px;
+  text-transform: lowercase;
+  border: 0px;
+
+	&:focus {
+		outline: 0px auto;
+		color: inherit;
+	}
+
+	&:active {
+		box-shadow: inset 0 0px 0px transparent;
+	}
+}
+
+
+.btn--small {
+	background: $beige;
+	color: $white;
+	height: 28px;
+  line-height: 6px;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: white;
+	}
+}
+
+.btn-link {
+	background: none;
+	color: $beige;
+
+	&:hover,
+	&:focus,
+	&:visited,
+	&:active {
+		color: $beige;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+}
+
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active,
+.btn.active,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+	outline: 0px transparent;
+	box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+}
+

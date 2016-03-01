@@ -1,0 +1,44 @@
+
+// Tabs style
+// ---------------
+
+.tab-base {
+	font-size: 1.6rem;
+	padding: 11px 28px;
+	height: 37px;
+  line-height: 16px;
+  text-transform: lowercase;
+  border: 0px;
+  background: $blue-disable;
+
+	a {
+		color: $white;
+		width: 70px;
+    display: block;
+    margin: 0 auto;
+	}
+
+	&:hover,
+	&:focus,
+	&:visited,
+	&:active,
+	a:hover,
+	a:focus,
+	a:visited,
+	a:active {
+		color: $white;
+		text-decoration: none;
+	}
+
+}
+
+.tab-base--active {
+	background: $blue;
+
+	&:hover,
+	&:focus,
+	&:visited,
+	&:active {
+		color: $white;
+	}
+}

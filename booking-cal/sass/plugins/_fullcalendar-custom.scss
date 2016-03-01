@@ -1,0 +1,145 @@
+// Override default style
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover {
+	border-color: $beige-light;
+}
+
+.fc-unthemed .fc-today {
+	background: $beige-light;
+}
+
+.fc-basic-view td.fc-week-number span,
+.fc-basic-view td.fc-day-number {
+	padding-top: 10px;
+  padding-right: 8px;
+}
+
+.fc-event {
+	background: $blue-second;
+	border: 0px;
+	border-radius: 22px;
+	height: 28px;
+  top: -3px;
+  margin: 0;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.fc-event {
+	.fc-content {
+		padding-left: 24px;
+	  padding-top: 6px;
+	  font-size: 1.4rem;
+	  background-image: url('#{$icon-path}/schedule-circle-left-icon.svg'), url('#{$icon-path}/schedule-circle-right-icon.svg') ;
+		background-position: right center, left center;
+		background-repeat: no-repeat;
+		height: 21px;
+	  background-size: 11.5px;
+	  background-position-x: 99.5%, 0.5%;
+	  background-position-y: 50%, 50%;
+	}
+
+ 	&.fc-not-end .fc-content {
+ 		background-image: url('#{$icon-path}/schedule-circle-right-icon.svg');
+ 		background-position: left center;
+ 	}
+
+ 	&.fc-not-start .fc-content {
+ 		background-image: url('#{$icon-path}/schedule-circle-left-icon.svg');
+ 		background-position: right center;
+ 	}
+}
+
+.fc-time {
+	display: none;
+}
+
+.fc button {
+	padding: 0 1em;
+	height: 37px;
+	font-size: 1.6rem;
+}
+
+.fc-month-button,
+.fc-agendaDay-button,
+.fc-agendaWeek-button {
+	min-width: 90px;
+}
+
+.fc-next-button,
+.fc-prev-button {
+	padding: 0 !important;
+}
+
+
+.fc-state-default.fc-corner-right,
+.fc-state-default.fc-corner-left {
+	border-radius: 0;
+}
+
+.fc-state-default {
+	box-shadow: 0 0 0 transparent;
+	text-shadow: 0 0 0 transparent;
+	color: $white;
+	border: 0px transparent;
+	background: $blue-disable;
+}
+
+.fc-state-down,
+.fc-state-active {
+	background-color: $blue;
+	box-shadow: 0 0 0 transparent;
+}
+
+
+
+// Our custom style
+.fc-row.fc-widget-header {
+	height: 44px;
+	background: $beige-light;
+
+	.fc-day-header {
+		border-right-width: 0px;
+    border-left-width: 0px;
+    line-height: 44px;
+    color: $blue;
+    text-transform: lowercase;
+	}
+}
+
+
+.fc-view-container {
+	padding-top: 6px;
+	margin-bottom: 30px;
+}
+
+
+// Price on each day
+.fc-day {
+	position: relative;
+
+	span {
+		position: absolute;
+    bottom: 1px;
+    right: 8px;
+    color: #E6DFD4;
+    font-size: 0.8em;
+	}
+}
+
+
+.fc-past {
+    background: $disable-gray !important;
+    color: #DCDADA !important;
+
+    span {
+    	color: darken(#E6DFD4, 5%);
+    }
+}
+
+

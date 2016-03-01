@@ -1,0 +1,65 @@
+// Initial Data Step
+// -----------------------------
+
+.insert-data {
+  margin-left: 35%;
+  margin-top: 20%;
+  height: 220px;
+  background: $blue-gray;
+
+	.insert-data__wrap {
+		min-height: 60px;
+  	padding-bottom: 1px;
+  	max-width: 315px;
+   	margin: 0 auto;
+
+
+  	p.msg.err-msg,
+  	p.msg.invalid-msg {
+			padding: 7px 0 7px 38px;
+		}
+
+		input {
+			background: $white;
+		}
+
+		button {
+			margin-right: 34px;
+    	margin-top: 15px;
+		}
+
+		// Price Form
+  	.price-box {
+	  	color: $white;
+	  	padding-top: 14px;
+	  	position: relative;
+
+	  	.arrow-select {
+	  		top: 26px;
+	  		right: 154px;
+	  		color: $blue;
+	  	}
+
+	  	.price-box__price {
+	  		width: 96px;
+
+	  		& + .arrow-select {
+	  			right: 128px;
+	  		}
+	  	}
+
+	  	.price-box__currency {
+	  		width: 75px;
+	  		margin-right: 5px;
+	  		background: rgba($white, 0.95);
+	  		color: $blue;
+	  	}
+
+	  	.price-box__type {
+	  		width: 105px;
+	  	}
+
+	  }
+	}
+
+}

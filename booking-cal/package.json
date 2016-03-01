@@ -1,0 +1,30 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "functions.js",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "bootstrap-datepicker": "^1.6.0",
+    "dropzone": "^4.3.0",
+    "fullcalendar": "^2.6.1",
+    "jquery": "^2.2.1",
+    "jquery.session": "^1.0.0",
+    "moment": "^2.11.2",
+    "mustache": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/githubg.com/gsambrotta.git"
+  },
+  "author": "gsambrotta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/githubg.com/gsambrotta/issues"
+  },
+  "homepage": "https://github.com/githubg.com/gsambrotta#readme"
+}

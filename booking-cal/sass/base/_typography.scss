@@ -1,0 +1,30 @@
+
+// Typography
+// ------------------
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700);
+
+
+// Font size
+$default-size: 1rem;
+
+
+
+html {
+  font-size: 62.5%; // =10px
+}
+
+body {
+  font-size: 20px;
+  font-size: $default-size;
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+
+

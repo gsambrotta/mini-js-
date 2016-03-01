@@ -1,0 +1,97 @@
+
+// Common forms style
+// -------------------
+
+.form-group {
+	margin-bottom: 6px;
+
+	input, textarea, select, .input {
+		border: 0px transparent;
+		border-radius: 0px;
+		background: $blue-gray;
+		color: $blue;
+		@include prefix(appearance, none, webkit moz ms o);
+		//-webkit-appearance: none;
+    font-size: 1.6rem;
+    font-size: fonts(p-size, big);
+	}
+
+	input[type=number] {
+	    -moz-appearance:textfield;
+	}
+	input[type=number]::-webkit-outer-spin-button,
+	input[type=number]::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+	/* Change the white to any color ;) */
+	input:-webkit-autofill {
+	    -webkit-box-shadow: 0 0 0px 0px white inset;
+	}
+}
+
+.arrow-select {
+	position: absolute;
+  top: 10px;
+  right: 28px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-315deg);
+}
+
+
+
+// Datapicker
+.datapicker-icon-wrap {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+}
+
+// Errors
+.msg {
+	margin: 3px 0;
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-style: italic;
+
+  &.err-msg,
+  &.invalid-msg {
+		color: $error !important;
+	}
+
+	&.err-msg.err-msg--light,
+	&.invalid-msg.invalid-msg--light  {
+		color: $error-dark-bg !important;
+	}
+
+}
+
+
+// Bootstrap Override
+.form-control:focus {
+	border-color: transparent;
+	box-shadow: none;
+}
+
+// For some reasons bootstrap don't like placeholder mixin
+.form-control::-webkit-input-placeholder { opacity: 0.5; font-size: 1.6rem; }
+.form-control:-moz-placeholder { opacity: 0.5; font-size: 1.6rem; }
+.form-control::-moz-placeholder { opacity: 0.5; font-size: 1.6rem; }
+.form-control:-ms-input-placeholder { opacity: 0.5; font-size: 1.6rem; }
+
+.form-control {
+	box-shadow: none; border-radius: 0px;
+}
+
+.form-horizontal .form-group {
+	margin-right: auto;
+  margin-left: auto
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+	background: #e7ebef;
+}
