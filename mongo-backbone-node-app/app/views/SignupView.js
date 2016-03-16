@@ -1,6 +1,13 @@
+define([
+	'backbone',
+	'mustache',
+	'models/UserModel',
+	'views/UserListView',
+], function (Backbone, Mustache, UserModel, UserListView) {
+
 var SignupView = Backbone.View.extend({
 	el: $(".form-signin"),
-	model: userModel,
+	model: UserModel,
 
 	events: {
 		'click #btn-submit': 'postInputs'
@@ -35,7 +42,7 @@ var SignupView = Backbone.View.extend({
 		//this.model.set(options);
 		//this.model.save();
 
-		var user = new User();
+		var user = new UserModel();
 		user.set(options);
 		user.save(options, {
 			success: function(){
@@ -49,7 +56,8 @@ var SignupView = Backbone.View.extend({
 		});
 
 		// switch view
-		window.app.switchFromSignupToUsersList();
+		var userListView = new UserListView();
+		app.switchViews(userListView);
 
 	},
 
@@ -59,4 +67,8 @@ var SignupView = Backbone.View.extend({
 	}
 
 });
+
+return SignupView;
+});
+
 

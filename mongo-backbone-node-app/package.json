@@ -18,6 +18,8 @@
     "jquery": "^2.2.0",
     "mongoose": "^4.4.4",
     "mustache": "^2.2.1",
+    "requirejs": "^2.1.22",
+    "requirejs-text": "^2.0.12",
     "restify": "^4.0.4",
     "underscore": "^1.8.3"
   },

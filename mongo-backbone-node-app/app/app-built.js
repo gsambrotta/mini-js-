@@ -1,27 +1,3 @@
-TemplateManager = {
-  templates: {},
-
-  get: function(id, callback){
-    var template = this.templates[id];
-
-    if (template) {
-      callback(template);
-
-    } else {
-
-      var that = this;
-      $.get("src/templates/" + id + ".html", function(template){
-        var $tmpl = $(template);
-        that.templates[id] = $tmpl;
-        callback($tmpl);
-      });
-
-    }
-
-  }
-
-}
-/////////////////////////// 
 var User = Backbone.Model.extend({
 	defaults: {
 		rememberMe: false
@@ -62,6 +38,7 @@ var Searchers = Backbone.Collection.extend({
 });
 
 /////////////////////////// 
+
 var SignupView = Backbone.View.extend({
 	el: $(".form-signin"),
 	model: userModel,
@@ -127,17 +104,32 @@ var SignupView = Backbone.View.extend({
 /////////////////////////// 
 
 var UserListView = Backbone.View.extend({
-	template: 'user-list',
+
+	initialize: function() {
+		/*
+		$.get('app/templates/user-list.html', function(template) {
+	    var render = Mustache.to_html(template, this.collection);
+	  	$(that.el).html(rendered);
+	  });
+		*/
+	},
+
 
 	render: function(){
 		var that = this;
 		var modelsAttr = [];
 
+		TemplateManager.get(this.template, function(template){
+      var tmp = $(template).tmpl();
+      var rendered = Mustache.to_html(that.tmp, that.collection);
+      //that.$el.html(tmp);
+      $(that.el).html(rendered);
+    });
+
 		var users = new Searchers();
 		users.fetch({
 			success: function(users){
-				$("#target").hide();
-				$('#user-list-template').show();
+				//that.renderTemplate();
 
 				jQuery.each( users.models, function(index, value){
 					console.log(value.attributes);
@@ -145,15 +137,17 @@ var UserListView = Backbone.View.extend({
 				});
 			}
 		});
+	},
 
-		// not good practice, but ok for small local app
-		TemplateManager.get(this.template, function(template){
-      var html = $(template);
-      that.$el.html(html);
-      that.$el.html(template(modelsAttr));
-    });
+	renderTemplate: function() {
+		var that = this;
 
+
+		/*
+		rendered = Mustache.to_html(that.template, that.collection);
+		$(that.el).html(rendered);
 		return that;
+		*/
 	}
 });
 

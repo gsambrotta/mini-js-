@@ -11,13 +11,13 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
-      //all: ['gruntfile.js', 'src/**/*.js'],
+      //all: ['gruntfile.js', 'app/**/*.js'],
       ignore_warning: {
         options: {
           //'-W009': true,
           //'-W041': true
         },
-        src: ['gruntfile.js', 'src/collections/**/*.js', 'src/models/**/*.js', 'src/views/**/*.js', 'router.js', 'app.js']
+        src: ['gruntfile.js', 'app/collections/**/*.js', 'app/models/**/*.js', 'app/views/**/*.js', 'router.js', 'app.js']
       },
     },
 
@@ -36,13 +36,13 @@ module.exports = function(grunt) {
         separator: '/////////////////////////// \n',
       },
       dist: {
-        src: ['src/loadTmps.js', 'src/models/**/*.js', 'src/collections/**/*.js', 'src/views/**/*.js', 'src/router.js', 'src/app.js'],
-        dest: 'src/app-built.js',
+        src: ['app/loadTmps.js', 'app/models/**/*.js', 'app/collections/**/*.js', 'app/views/**/*.js', 'app/router.js', 'app/app.js'],
+        dest: 'app/app-built.js',
       },
     },
 
     watch: {
-      files: ['Gruntfile.js', 'src/**/*.js'],
+      files: ['Gruntfile.js', 'app/**/*.js'],
       tasks: ['jshint', 'concat'],
     }
 
