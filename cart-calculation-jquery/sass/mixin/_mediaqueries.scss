@@ -1,0 +1,34 @@
+
+// Mediaquery mixin - Mobile first approach
+// -----------------------------------------
+
+// Var sizes
+$mobile: 320px;
+$tablet: 530px;
+$bigger-tablet: 768px;
+$screen: 1024px;
+
+
+@mixin breakpoint($media) {
+  @if $media == mobile { //max-width: 320px
+    @media only screen and (max-width: $mobile) { @content; }
+  }
+  @else if $media == tablet { //min-width: 321px
+    @media only screen and (min-width: $mobile + 1) { @content; }
+  }
+  @else if $media == bigger-tablet { //min-width: 531px
+    @media only screen and (min-width: $tablet + 1) { @content; }
+  }
+  @else if $media == medium-screen { //min-width: 769px
+    @media only screen and (min-width: $bigger-tablet + 1) { @content; }
+  }
+  @else if $media == wide-screen { //min-width: 1025px
+    @media only screen and (min-width: $screen + 1) { @content; }
+  }
+  @else if $media == notebook {
+    @media only screen and (max-height: 850px) { @content; }
+  }
+
+}
+
+

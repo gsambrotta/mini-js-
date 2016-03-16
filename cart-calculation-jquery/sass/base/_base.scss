@@ -1,0 +1,36 @@
+
+// Base style
+// ----------------
+
+html {
+	height: 100%;
+}
+
+body {
+	color: $text-color;
+	height: 100%;
+}
+
+*:focus {
+    outline: 0;
+}
+
+
+// Helpers
+.bold {
+	font-weight: 700;
+}
+
+
+// Button style
+.btn {
+	border-radius: 4px;
+	background-color: $blue;
+	color: $white;
+  text-transform: capitalize;
+  border: 0;
+  padding: 12px 11px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+

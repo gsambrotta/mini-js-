@@ -1,0 +1,120 @@
+<!Doctype>
+<html>
+	<head>
+		<title> Cart Exercise </title>
+
+		<meta charset="UFT-8">
+		<meta name="author" content="gsambrotta">
+		<meta name="description" content="cart challenge without libraries or fremeworks">
+		<meta name="keywords" content="cart, akqa, challenge">
+
+		<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	</head>
+
+	<body>
+
+		<div class="cart-block">
+			<header>
+
+				<h2> Your Basket </h2>
+				<p>
+					Items you have added to your basket are shown below.
+					Adjust the quantities or remove items before continuing your purchase.
+				</p>
+			</header>
+
+			<div class="cart-block__cart">
+
+				<table>
+					<thead>
+					<tr>
+						<th>Product</th>
+						<th>Price</th>
+						<th>Qty</th>
+						<th>Cost</th>
+						<th></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td> T-Shirt </td>
+						<td>	&#163; <span class="one-piece-price">1.99</span> </td>
+						<td>
+							<div class="quantity">
+								<input type="text" value="1"/>
+								<div class="add-icons">
+									<i class="fa fa-plus-square"></i>
+									<i class="fa fa-minus-square"></i>
+								</div>
+							</div>
+						</td>
+						<td> &#163; <span class="row-tot">1.99</span> </td>
+						<td> <i class="fa fa-trash"></i> </td>
+					</tr>
+					<tr>
+						<td> Cap </td>
+						<td> &#163;<span class="one-piece-price"> 2.99 </span> </td>
+						<td>
+							<div class="quantity">
+								<input type="text" value="1"/>
+								<div class="add-icons">
+									<i class="fa fa-plus-square"></i>
+									<i class="fa fa-minus-square"></i>
+								</div>
+							</div>
+						</td>
+						<td> &#163; <span class="row-tot"> 2.99 </span> </td>
+						<td> <i class="fa fa-trash"></i> </td>
+					</tr>
+					<tr>
+						<td> Jacket </td>
+						<td> &#163;<span class="one-piece-price">3.99 </span> </td>
+						<td>
+							<div class="quantity">
+								<input type="text" value="1"/>
+								<div class="add-icons">
+									<i class="fa fa-plus-square"></i>
+									<i class="fa fa-minus-square"></i>
+								</div>
+							</div>
+						</td>
+						<td> &#163;<span class="row-tot"> 3.99  </span> </td>
+						<td> <i class="fa fa-trash"></i> </td>
+					</tr>
+					</tbody>
+				</table>
+
+
+				<section class="cart__footer">
+					<table>
+						<tbody>
+							<tr>
+								<td> Subtotal </td>
+								<td> &#163;<span id="subtot"> 8.97 </span> </td>
+							</tr>
+							<tr>
+								<td> VAT @ 20% </td>
+								<td> &#163;<span id="vatCalc">2.39 </span></td>
+							</tr>
+							<tr class="bold">
+								<td> Total Cost </td>
+								<td> &#163;<span id="grandTot"> 14.35 </span> </td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</div>
+
+			<div class="cta-btn">
+				<button type="submit" class="btn"> Buy Now >> </button>
+			</div>
+		</div>
+
+		<script src="js/cart-item.js"></script>
+		<script src="js/cart-total.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
