@@ -27,7 +27,7 @@ var SignupView = Backbone.View.extend({
 		var that = this;
 		evt.preventDefault();
 
-		var options = {};
+		var options = [];
 		this.$el.find('input').each(function() {
 			var key = this.id;
 			var value = this.value;
@@ -39,8 +39,6 @@ var SignupView = Backbone.View.extend({
 			this.model.set("rememberMe", true);
 		}
 
-		//this.model.set(options);
-		//this.model.save();
 
 		var user = new UserModel();
 		user.set(options);

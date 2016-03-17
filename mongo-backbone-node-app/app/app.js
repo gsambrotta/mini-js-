@@ -6,9 +6,6 @@ define([
 	'views/SignupView',
 ], function (Backbone, UserModel, SearchersCollection, UserListView, SignupView) {
 
-	var userModel = new UserModel();
-	var searchersCollection = new SearchersCollection();
-
 	var SignUp = Backbone.View.extend({
 		el: '.container'
 	});
