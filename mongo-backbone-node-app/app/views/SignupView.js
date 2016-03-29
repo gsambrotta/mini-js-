@@ -1,26 +1,28 @@
 define([
 	'backbone',
-	'mustache',
 	'models/UserModel',
 	'views/UserListView',
-], function (Backbone, Mustache, UserModel, UserListView) {
+	'text!templates/signup.html',
+], function (Backbone, UserModel, UserListView, Signup) {
 
 var SignupView = Backbone.View.extend({
-	el: $(".form-signin"),
+	template: _.template(Signup),
+	id: '#signup',
 	model: UserModel,
 
 	events: {
 		'click #btn-submit': 'postInputs'
 	},
 
-	render: function() {
-		var that = this;
-
+	initialize: function() {
 		// Make sure functions are called in the right scope
-		_.bindAll(that, 'postInputs');
+		_.bindAll(this, 'render', 'postInputs');
+	},
 
-		// Listen to model changes
-		// this.model.bind('change', this.edit)
+	render: function() {
+		// render template
+		var html = this.$el.html(this.template);
+		html.appendTo('.container');
 	},
 
 	postInputs: function( evt ) {
@@ -53,9 +55,9 @@ var SignupView = Backbone.View.extend({
 			this.value = "";
 		});
 
-		// switch view
-		var userListView = new UserListView();
-		app.switchViews(userListView);
+		// Navigate to users/
+		// and switch view
+  	appRouter.navigate("#/users");
 
 	},
 

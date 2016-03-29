@@ -4,7 +4,6 @@ requirejs.config({
       jquery: '../node_modules/jquery/dist/jquery.min',
       underscore: '../node_modules/underscore/underscore-min',
       backbone: '../node_modules/backbone/backbone',
-      mustache: '../node_modules/mustache/mustache',
       bootstrap: '../node_modules/bootstrap/dist/js/bootstrap.min',
       jasmine: '../jasmine-2.2.0/jasmine',
       text: '../node_modules/requirejs-text/text'

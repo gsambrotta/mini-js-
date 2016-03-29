@@ -6,11 +6,11 @@
 
 		<div class="main">
 			<h2>Subscribers</h2>
-			{{each }}
-				{{name}}
-			{{/each}}
-			}
 			<ul>
+
+				<% _.each(users, function(user) { %>
+				<li> <%=user.name%> </li>
+        <%});%>
 
 			</ul>
 		</div>

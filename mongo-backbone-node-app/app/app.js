@@ -1,14 +1,11 @@
 define([
 	'backbone',
+	'router',
 	'models/UserModel',
 	'collections/SearchersCollection',
 	'views/UserListView',
 	'views/SignupView',
-], function (Backbone, UserModel, SearchersCollection, UserListView, SignupView) {
-
-	var SignUp = Backbone.View.extend({
-		el: '.container'
-	});
+], function (Backbone, Router, UserModel, SearchersCollection, UserListView, SignupView) {
 
 	window.app = {
 
@@ -25,9 +22,7 @@ define([
 	  }
 	}
 
-	// Show first view
-	var signupView = new SignupView();
-	app.switchViews(signupView);
+	appRouter = new Router();
+	Backbone.history.start();
 
-//return app;
 });
