@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 const gulp = require('gulp');
 const watchify = require('watchify');

@@ -1,35 +1,34 @@
-'use strict';
+//'use strict';
 
-const gulp = require('gulp');
-const bundle = require('./task/bundle');
-
-gulp.task('bundle', bundle);
-gulp.task('default', ['bundle']);
-
-
-// Since i have just one task, is there a way to keep the code of bundle.js, here?
-// Maybe smth like this would work?
-/*
-gulp.task('bundle', function() {
-	const watchify = require('watchify');
-	const browserify = require('browserify');
-	const babelify = require('babelify');
-	const source = require('vinyl-source-stream');
+var gulp = require('gulp');
+var watchify = require('watchify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var reactify = require('reactify');
 
 
-	const opts = Object.assign({}, watchify.args, {
-	  entries: ['./public/scripts/app.js'],
-	  debug: true
-	});
+gulp.task('browserify', function() {
+    var bundler = browserify({
+        entries: ['./public/scripts/app.js'], // Only need initial file, browserify finds the deps
+        transform: [reactify], // We want to convert JSX to normal javascript
+        debug: true, // Gives us sourcemapping
+        cache: {}, packageCache: {}, fullPaths: true // Requirement of watchify
+    });
+    var watcher  = watchify(bundler);
 
-	const b = watchify(browserify(opts));
-	b.transform(babelify);
-	b.on('update', bundle);
+    return watcher
+    .on('update', function () { // When any files update
+        var updateStart = Date.now();
+        console.log('updating..');
 
-	function bundle() {
-	  return b.bundle()
-	    .pipe(source('bundle.js'))
-	    .pipe(gulp.dest('./public/js'));
-	}
+        watcher.bundle() // Create new bundle that uses the cache for high performance
+        .pipe(source('app.js'))
+        .pipe(gulp.dest('./public/js/'));
+        console.log('updated!', (Date.now() - updateStart) + 'ms');
+    })
+    .bundle() // Create the initial bundle when starting the task
+    .pipe(source('app.js'))
+    .pipe(gulp.dest('./public/js/'));
 });
-*/
+
+gulp.task('default', ['browserify']);

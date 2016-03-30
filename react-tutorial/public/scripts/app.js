@@ -14,10 +14,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 //Components
-import CommentBox from './public/scripts/components/CommentBox.js';
-import CommentList from './public/scripts/components/CommentList.js';
-import CommentForm from './public/scripts/components/CommentForm.js';
-import Comment from './public/scripts/components/Comment.js';
+import CommentBox from './components/CommentBox.js';
+import CommentList from './components/CommentList.js';
+import CommentForm from './components/CommentForm.js';
+import Comment from './components/Comment.js';
 
 
 ReactDOM.render(
