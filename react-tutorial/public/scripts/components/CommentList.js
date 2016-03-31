@@ -1,6 +1,5 @@
 import React from 'react';
-import Jquery from 'jquery';
-
+import Comment from './Comment.js';
 
 export class CommentList extends React.Component {
   render() {
@@ -16,3 +15,5 @@ export class CommentList extends React.Component {
     );
   }
 }
+
+module.exports = CommentList;

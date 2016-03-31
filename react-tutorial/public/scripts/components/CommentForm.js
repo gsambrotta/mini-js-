@@ -1,19 +1,22 @@
 import React from 'react';
-import Jquery from 'jquery';
 
 
 export class CommentForm extends React.Component {
-  getInitialState() {
-    return {author: '', text: ''};
-  },
+  constructor(props) {
+    super(props);
+    this.state = {
+      author: '',
+      text: ''
+    }
+  }
 
   handleAuthorChange(e) {
     this.setState({author: e.target.value});
-  },
+  }
 
   handleTextChange(e) {
     this.setState({text: e.target.value});
-  },
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -24,7 +27,7 @@ export class CommentForm extends React.Component {
     }
     this.props.onCommentSubmit({author, text});
     this.setState({author: '', text: ''});
-  },
+  }
 
   render() {
     return (
@@ -46,3 +49,5 @@ export class CommentForm extends React.Component {
     );
   }
 }
+
+module.exports = CommentForm;

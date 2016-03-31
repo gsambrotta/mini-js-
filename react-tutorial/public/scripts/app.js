@@ -12,6 +12,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import jQuery from 'jquery';
+window.$ = window.jQuery = jQuery;
 
 //Components
 import CommentBox from './components/CommentBox.js';

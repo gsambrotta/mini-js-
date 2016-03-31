@@ -1,12 +1,11 @@
 import React from 'react';
-import Jquery from 'jquery';
-import Marked from 'marked';
+import marked from 'marked';
 
 export class Comment extends React.Component {
   rawMarkup() {
     let rawMarkup = marked(this.props.children.toString(), {sanitize: true});
     return { __html: rawMarkup };
-  },
+  }
 
   render() {
     return (
@@ -19,3 +18,5 @@ export class Comment extends React.Component {
     );
   }
 }
+
+module.exports = Comment;

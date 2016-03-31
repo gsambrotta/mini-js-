@@ -1,9 +1,21 @@
 import React from 'react';
-import Jquery from 'jquery';
-
-// Can i use ES6 method/function shortcut also for ajax.success and ajax.error?
+import CommentList from './CommentList.js';
+import CommentForm from './CommentForm.js';
 
 export default class CommentBox extends React.Component {
+  constructor(props) {
+    super(props);
+    //console.log(this.props)
+    this.state = {
+      data: []
+    }
+  }
+  /* NOT USED in ES6, Must use this.state inside the constructor
+  getInitialState() {
+    return {data: []};
+  }
+  */
+
   loadCommentsFromServer() {
     $.ajax({
       url: this.props.url,
@@ -16,7 +28,7 @@ export default class CommentBox extends React.Component {
         console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
-  },
+  }
 
   handleCommentSubmit(comment) {
     let comments = this.state.data;
@@ -40,16 +52,16 @@ export default class CommentBox extends React.Component {
         console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
-  },
-
-  getInitialState() {
-    return {data: []};
-  },
+  }
 
   componentDidMount() {
     this.loadCommentsFromServer();
-    setInterval(this.loadCommentsFromServer, this.props.pollInterval);
-  },
+    setInterval(() => this.loadCommentsFromServer, this.props.pollInterval);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId)
+  }
 
   render() {
     return (
@@ -62,3 +74,4 @@ export default class CommentBox extends React.Component {
   }
 
 }
+
